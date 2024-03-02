@@ -129,7 +129,10 @@ footer p {
   cursor: pointer;
 }
 
-.muscle:hover {
+.muscle {
   fill: red;
+}
+.muscle:hover{
+  fill: purple;
   cursor: pointer;
 }
