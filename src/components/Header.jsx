@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom"
 import Container from 'react-bootstrap/Container';
+import Dumbell from './icons/Dumbell'
 
 
 function Header() {
@@ -14,7 +15,7 @@ function Header() {
   const activeStyles = {
     fontWeight: "bold",
     textDecoration: "underline",
-    color: "darkred"
+    color: "#E73539"
   }
 
 
@@ -24,7 +25,10 @@ function Header() {
 
         {/* Burger Menu */}
         <div className="logo-container">
-            <Link className="logo" to="/">FitFusion</Link>
+            <Link to="/" className="logo-svg-container">
+              <Dumbell color='#E73539' />
+              <span className="logo">FitFusion</span>
+            </Link>
             <div className="burger-menu" onClick={toggleMenu}>
                 <span></span>
                 <span></span>
@@ -32,6 +36,13 @@ function Header() {
             </div>
         </div>
         <nav className={menuOpen ? "nav-links open" : "nav-links"}>
+          <NavLink
+              className="nav-link"
+              to="/"
+              style={({ isActive }) => isActive ? activeStyles : null}
+            >
+              Home
+          </NavLink>
           <NavLink
             className="nav-link"
             to="/fitness"
