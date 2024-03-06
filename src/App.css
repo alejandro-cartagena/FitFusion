@@ -385,6 +385,7 @@ footer p {
     .plans-cards-container {
         flex-direction: row;  
         justify-content: center;
+        margin-bottom: 2em;
     }
 
     .plans-card:not(:last-child) {
