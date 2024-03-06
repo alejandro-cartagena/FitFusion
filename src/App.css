@@ -178,4 +178,18 @@ footer p {
 }
 
 
+/*********************/
+/* HOME PAGE STYLES */
+/*******************/
+
+.home-hero {
+    height: 600px;
+    background-image: url('./images/bg-img.jpg');
+    background-size: 1000px;
+    background-repeat: no-repeat;
+    background-position: 100% 40%;
+    /* background-color: #000000; */
+}
+
+
 
