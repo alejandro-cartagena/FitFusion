@@ -9,9 +9,9 @@ export default function Layout() {
         
         <div className="layout">
             <Header />
-            <main>
-                <Outlet />
-            </main>
+                <main>
+                    <Outlet />
+                </main>
             <Footer/>
         </div>
     )
