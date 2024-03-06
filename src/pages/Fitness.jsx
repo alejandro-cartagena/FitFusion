@@ -4,7 +4,7 @@ import AnatomyFront from '../components/AnatomyFront';
 
 export default function Home() {
   return (
-    <div className="flex">
+    <div className="flexAna">
       <AnatomyFront />
       <AnatomyBack />
     </div>

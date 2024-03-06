@@ -1,4 +1,6 @@
-* { box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 body {
   margin: 0;
@@ -15,36 +17,36 @@ body {
 /****************/
 
 .dumbell-svg {
-    /* border: solid white; */
-    width: 50px ;
-    height: fit-content;
-    margin-right: 0.5em;
+  /* border: solid white; */
+  width: 50px;
+  height: fit-content;
+  margin-right: 0.5em;
 }
 
 .logo-svg-container {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 a.logo-svg-container {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .logo {
-    font-size: 1.5rem;
-    text-decoration: none;
-    color: #FFFFFF;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: #ffffff;
 }
 
 header {
-    font-family: "Saira Condensed", sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    background-color: black;
-    color: white;
-    padding: 2em 0;
-    display: flex;
-    justify-content: space-between;
+  font-family: 'Saira Condensed', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background-color: black;
+  color: white;
+  padding: 2em 0;
+  display: flex;
+  justify-content: space-between;
 }
 
 .header-container {
@@ -53,10 +55,9 @@ header {
   align-items: center;
 }
 
-
 .nav-link:hover:not(.active) {
-    color: #E73539;
-} 
+  color: #e73539;
+}
 
 nav {
   display: flex;
@@ -126,39 +127,37 @@ nav {
 /********/
 
 footer {
-    margin-top: auto;
-    background-color: black;
-    color: white;
-    padding: 2em 0;
+  margin-top: auto;
+  background-color: black;
+  color: white;
+  padding: 2em 0;
 }
 
 .footer-items-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 footer h3 {
-    font-family: "Saira Condensed", sans-serif;
-    font-weight: 600;
-    max-width: 215px;
-    min-width: 175px;
-    text-transform: uppercase;
+  font-family: 'Saira Condensed', sans-serif;
+  font-weight: 600;
+  max-width: 215px;
+  min-width: 175px;
+  text-transform: uppercase;
 }
 
 .social-media-icon {
-    font-size: 30px;
+  font-size: 30px;
 }
 
-
-
 .social-media-icon:not(:last-child) {
-    margin-right: 0.35em;
+  margin-right: 0.35em;
 }
 
 .social-media-icon:hover {
-    color: #E73539;
-    cursor: pointer;
+  color: #e73539;
+  cursor: pointer;
 }
 
 footer p {
@@ -168,20 +167,26 @@ footer p {
 }
 
 @media (max-width: 500px) {
-    .social-media-icon {
-        font-size: 25px;
-    }
+  .social-media-icon {
+    font-size: 25px;
+  }
 
-    footer p {
-        font-size: 0.825rem;
-    }
+  footer p {
+    font-size: 0.825rem;
+  }
 }
 
-
-.muscle {
-  fill: red;
+/* SVG STYLES */
+.flexAna {
+  display: flex;
 }
-.muscle:hover{
+.test {
+  fill: purple;
+}
+.muscle .muscleChild {
+  fill: #E73539;
+}
+.muscle:hover .muscleChild {
   fill: purple;
   cursor: pointer;
 }
