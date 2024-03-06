@@ -1,6 +1,4 @@
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box;}
 
 body {
   margin: 0;
@@ -16,12 +14,37 @@ body {
 /*HEADER STYLES*/
 /****************/
 
+.dumbell-svg {
+    /* border: solid white; */
+    width: 50px ;
+    height: fit-content;
+    margin-right: 0.5em;
+}
+
+.logo-svg-container {
+    display: flex;
+    align-items: center;
+}
+
+a.logo-svg-container {
+    text-decoration: none;
+}
+
+.logo {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
 header {
-  background-color: black;
-  color: white;
-  padding: 2em 0;
-  display: flex;
-  justify-content: space-between;
+    font-family: "Saira Condensed", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background-color: black;
+    color: white;
+    padding: 2em 0;
+    display: flex;
+    justify-content: space-between;
 }
 
 .header-container {
@@ -30,15 +53,10 @@ header {
   align-items: center;
 }
 
-.logo {
-  font-size: 1.5rem;
-  text-decoration: none;
-  color: #ffffff;
-}
 
 .nav-link:hover:not(.active) {
-  color: red;
-}
+    color: #E73539;
+} 
 
 nav {
   display: flex;
@@ -108,11 +126,39 @@ nav {
 /********/
 
 footer {
-  margin-top: auto;
-  text-align: center;
-  background-color: black;
-  color: white;
-  padding: 2em 0;
+    margin-top: auto;
+    background-color: black;
+    color: white;
+    padding: 2em 0;
+}
+
+.footer-items-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer h3 {
+    font-family: "Saira Condensed", sans-serif;
+    font-weight: 600;
+    max-width: 215px;
+    min-width: 175px;
+    text-transform: uppercase;
+}
+
+.social-media-icon {
+    font-size: 30px;
+}
+
+
+
+.social-media-icon:not(:last-child) {
+    margin-right: 0.35em;
+}
+
+.social-media-icon:hover {
+    color: #E73539;
+    cursor: pointer;
 }
 
 footer p {
@@ -121,13 +167,16 @@ footer p {
   font-size: 0.875rem;
 }
 
-.flex {
-  display: flex;
+@media (max-width: 500px) {
+    .social-media-icon {
+        font-size: 25px;
+    }
+
+    footer p {
+        font-size: 0.825rem;
+    }
 }
-.test {
-  fill: purple !important;
-  cursor: pointer;
-}
+
 
 .muscle {
   fill: red;
