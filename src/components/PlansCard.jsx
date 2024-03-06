@@ -1,4 +1,5 @@
 import React from 'react'
+import LearnMoreBtn from './Buttons/LearnMoreBtn'
 
 export default function PlansCard({ imgUrl, title, text}) {
     return (
@@ -8,7 +9,8 @@ export default function PlansCard({ imgUrl, title, text}) {
             </div>
             <h3>{title}</h3>
             <p>{text}</p>
-            <a className="learn-more-link" href="#">Learn More</a>
+            {/* Will add href prop later to Btn */}
+            <LearnMoreBtn />
         </div>
     )
 }
