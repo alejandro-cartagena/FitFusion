@@ -253,7 +253,7 @@ footer p {
 }
 
 /* HOME SECTIONS STYLES*/
-.home-section {
+.section {
     padding: 4em 0;
     display: flex;
     flex-direction: column;
@@ -263,7 +263,7 @@ footer p {
     background-color: #FFFFFF;
 }
 
-.home-section-heading {
+.section-heading {
     font-family: 'Saira Condensed', sans-serif;
     font-weight: 600;
     text-transform: uppercase;
@@ -356,7 +356,7 @@ footer p {
         margin-top: -98px;
     }
 
-    .home-section {
+    .section {
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
@@ -368,7 +368,7 @@ footer p {
         order: 1
     }
 
-    .home-section-text-container {
+    .section-text-container {
         /* max-width: 630px; */
         width: 40%;
     }
@@ -392,6 +392,52 @@ footer p {
         margin-bottom: 0;
         margin-right: 3em;;
     }
+}
+
+
+/**********************************/
+/* FITNESS OVERVIEW PAGE STYLES **/
+/********************************/
+
+.fitness-nav {
+  margin: 2em 0
+}
+
+.fitness-nav a {
+  text-decoration: none;
+  color: #000000;
+  font-size: 1rem;
+  margin-right: 1em;
+}
+
+.fitness-nav a:hover {
+  color: #E73539;
+}
+
+.overview-page-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.display-anatomy {
+  height: fit-content;
+  width: 40%;
+  max-width: 250px;
+  margin: 1em 0 1.5em 0;
+}
+
+.display-anatomy:not(:last-child) {
+  margin-right: 1em;
+}
+
+.overview-section-p2{
+  margin-bottom: 2em;
+}
+
+@media (min-width: 985px) {
+  .overview-page-section {
+    flex-direction: row;
+  }
 }
 
 
