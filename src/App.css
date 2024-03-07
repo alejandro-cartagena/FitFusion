@@ -21,7 +21,7 @@ p {
 /*REUSABLE BUTTONS */
 /******************/
 
-.learn-more-link {
+.learn-more-link,.btn {
     font-family: 'Saira Condensed', sans-serif;
     text-transform: uppercase;
     font-weight: 600;

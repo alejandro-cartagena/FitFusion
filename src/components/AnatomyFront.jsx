@@ -1,6 +1,8 @@
-import React from 'react';
+import React,{useEffect, useState} from 'react';
+import  lifts  from '../data/lifts';
 
 export default function AnatomyFront() {
+  console.log(lifts)
   return (
     <div>
       <svg
