@@ -272,7 +272,8 @@ footer p {
     margin-bottom: 0.5em;
 }
 
-.home-section-img {
+.home-section-img,
+.overview-section-img {
     width: 100%;
     margin-bottom: 1.25em;
     order: -1
@@ -281,8 +282,6 @@ footer p {
 .home-section-text {
     margin-bottom: 2em;
 }
-
-
 
 .home-section-plans-heading {
     margin-left: auto;
@@ -362,10 +361,14 @@ footer p {
         justify-content: space-between;
     }
 
+    .overview-section-img,
     .home-section-img {
         /* max-width: 550px; */
         width: 45%;
-        order: 1
+    }
+
+    .home-section-img {
+      order: 1
     }
 
     .section-text-container {
@@ -373,7 +376,8 @@ footer p {
         width: 40%;
     }
 
-    .home-section-nutrition-img {
+    .home-section-nutrition-img,
+    .overview-section-img {
         order: -1
     }
 
@@ -399,6 +403,10 @@ footer p {
 /* FITNESS OVERVIEW PAGE STYLES **/
 /********************************/
 
+/*Note: I used .section for two of the sections in the Overview Page.
+        .section was declared in the Home Page
+*/
+
 .fitness-nav {
   margin: 2em 0
 }
@@ -415,8 +423,15 @@ footer p {
 }
 
 .overview-page-section {
-  display: flex;
-  flex-direction: column;
+  padding: 0;
+}
+
+.overview-section-container {
+  padding: 4em 0;
+}
+
+.overview-section-heading {
+  margin-bottom: 1em;
 }
 
 .display-anatomy {
@@ -434,9 +449,69 @@ footer p {
   margin-bottom: 2em;
 }
 
+/*MAX REPS CARD*/
+.max-reps-card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(375px, 1fr));
+  grid-gap: 2em;
+}
+
+.max-reps-card {
+  background-color: #D9D9D9;
+  border-radius: 8px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* .max-reps-card:not(:last-child) {
+  margin-bottom: 3em;
+} */
+
+.max-reps-card-img {
+  width: 100%;
+  margin-bottom: 1em;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.max-reps-card-text-container {
+  padding: 0 3em 4em 3em;
+}
+
+.max-reps-card-title {
+  text-align: center;
+  font-family: 'Saira Condensed', sans-serif;
+  font-weight: 600;
+}
+
+.max-reps-card-p {
+  text-align: center;
+}
+
+.max-reps-learn-btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 3em;
+}
+
+@media (min-width: 760px) {
+  
+}
+
 @media (min-width: 985px) {
   .overview-page-section {
     flex-direction: row;
+  }
+
+  .fitness-nav a {
+    font-size: 1.15rem;
+    margin-right: 1.5em;
+  }
+
+  .display-anatomy:not(:last-child) {
+    margin-right: 4em;
   }
 }
 
