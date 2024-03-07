@@ -9,9 +9,8 @@ export default function Anatomy() {
     }
     return (
         <div>
-           {isFrontView ? <AnatomyFront/> : <AnatomyBack/>
-        }
-        <button className="btn" onClick={rotate}>Rotate</button>
+           {isFrontView ? <AnatomyFront/> : <AnatomyBack/>}
+            <button className="btn" onClick={rotate}>Rotate</button>
         </div>
         
     )
