@@ -51,6 +51,9 @@ export default function Overview() {
                 <div className='max-reps-card-container'>
                     {maxRepsCards}
                 </div>
+                <div className='max-reps-learn-btn'>
+                    <LearnMoreBtn />
+                </div>
                 
             </div>
 
