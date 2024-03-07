@@ -490,6 +490,12 @@ footer p {
   text-align: center;
 }
 
+.max-reps-learn-btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 3em;
+}
+
 @media (min-width: 760px) {
   
 }
