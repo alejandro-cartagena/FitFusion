@@ -533,3 +533,19 @@ footer p {
   fill: purple;
   cursor: pointer;
 }
+/* SVG Transition */
+.anatomy-container {
+    perspective: 20% /* Adjust the perspective for a closer 3D effect */
+}
+
+.anatomy-content {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease; /* Transition effect */
+    transform-style: preserve-3d; /* Ensure 3D transformations are preserved */
+    transform-origin: center top; /* Set the transform origin to the center */
+}
+
+.anatomy-container.back .anatomy-content {
+    transform: rotateY(180deg); /* Rotate to the back and scale down */
+}
