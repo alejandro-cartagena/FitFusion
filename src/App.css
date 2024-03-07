@@ -509,6 +509,10 @@ footer p {
     font-size: 1.15rem;
     margin-right: 1.5em;
   }
+
+  .display-anatomy:not(:last-child) {
+    margin-right: 4em;
+  }
 }
 
 
