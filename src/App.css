@@ -561,6 +561,6 @@ footer p {
   text-align: center;
 }
 .descriptionText{
-  max-width: 800px; /* Adjust the value as needed */
+  max-width: 600px; /* Adjust the value as needed */
   word-wrap: break-word; /* or overflow-wrap: break-word; */
 }

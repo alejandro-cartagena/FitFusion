@@ -41,9 +41,9 @@ export default function BasicModal(props) {
 }
 
   const [open, setOpen] = React.useState(false);
-  const [currentVid, setCurrentVid] = React.useState({video:'', description:''});
+  const [currentVid, setCurrentVid] = React.useState({video:'https://www.youtube.com/watch?v=pihE-4HWZx0', description:'Select a lift BRAH'});
   const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+  const handleClose = () => {setOpen(false); setCurrentVid({video:'https://www.youtube.com/watch?v=pihE-4HWZx0', description:'Select a lift BRAH'})};
   
        React.useEffect(() => {
      props.isModalOpen ? handleOpen () : '';
