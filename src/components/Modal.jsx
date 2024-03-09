@@ -20,7 +20,7 @@ const style = {
   left: '50%',
   transform: 'translate(-50%, -50%)',
   width: '50%',
-  height: '50%',
+  height: '60%',
   bgcolor: 'background.paper',
   border: '2px solid #000',
   boxShadow: 24,
@@ -28,18 +28,33 @@ const style = {
 };
 
 export default function BasicModal(props) {
+  function extractVideoId(url) {
+     if (typeof url !== 'string' || !url.trim()) {
+    return null;
+  }
+  const regex = /(?:\?|&)v=([^&]+)/;
+  const match = url.match(regex);
+  if (match) {
+    return match[1];
+  }
+  return null;
+}
+
   const [open, setOpen] = React.useState(false);
+  const [currentVid, setCurrentVid] = React.useState({video:'', description:''});
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
   
        React.useEffect(() => {
      props.isModalOpen ? handleOpen () : '';
   }, [props]);
+//        React.useEffect(() => {
+//      console.log(extractVideoId(currentVid))
+//   }, [currentVid]);
 
 
   return (
     <div>
-      {/* <Button onClick={handleOpen}>Open modal</Button> */}
       <Modal
         open={open}
         onClose={handleClose}
@@ -50,9 +65,15 @@ export default function BasicModal(props) {
            <h2>{open ? props.modalLifts[0].muscle : ''}</h2>
             <div className="modalFlex">
                 <ul>
-                    {props.modalLifts.map(el => <li key={el.id}>{el.name}</li>)}
+                    {props.modalLifts.map(el => <li className='liftItem' key={el.id} 
+                    onClick={() => setCurrentVid({description:el.description, video:el.video})}> {el.name}</li>)}
                 </ul>
-             <YouTube videoId="pihE-4HWZx0" opts={opts} />
+   
+             <div className='vidFlex'>
+                <p> {currentVid.description}</p>
+                {currentVid.video && <YouTube videoId={extractVideoId(currentVid.video)} opts={opts} />}
+             </div>
+             
             </div>
         </Box>
       </Modal>
