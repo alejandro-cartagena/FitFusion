@@ -547,3 +547,17 @@ footer p {
   display: flex;
   justify-content: space-between;
 }
+.vidFlex{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.liftItem{
+  list-style: none;
+  margin: 1.5rem 0;
+  margin-right: 2rem;
+}
+.liftItem:hover{
+  cursor: pointer;
+  color: red;
+}

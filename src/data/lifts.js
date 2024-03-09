@@ -5,7 +5,7 @@ const lifts = [
     name: 'Bicep Curls',
     description:
       'Bicep curls are a classic exercise for building strength and size in the biceps muscles.',
-    video: 'https://www.youtube.com/watch?v=pihE-4HWZx0',
+    video: 'https://www.youtube.com/watch?v=KVwb7_brG_8',
     muscle: 'Biceps',
   },
   {
@@ -13,7 +13,7 @@ const lifts = [
     name: 'Hammer Curls',
     description:
       'Hammer curls target the biceps brachii muscle along with the brachialis and brachioradialis muscles.',
-    video: 'https://www.youtube.com/watch?v=pihE-4HWZx0',
+    video: 'https://www.youtube.com/watch?v=KVwb7_brG_8',
     muscle: 'Biceps',
   },
   {
@@ -21,7 +21,7 @@ const lifts = [
     name: 'Chin-Ups',
     description:
       'Chin-ups primarily work the biceps, along with the back and shoulders.',
-    video: 'https://www.youtube.com/watch?v=pihE-4HWZx0',
+    video: 'https://www.youtube.com/watch?v=KVwb7_brG_8',
     muscle: 'Biceps',
   },
   {
@@ -29,7 +29,7 @@ const lifts = [
     name: 'Preacher Curls',
     description:
       'Preacher curls isolate the biceps muscles and are performed using a preacher bench.',
-    video: 'https://www.youtube.com/watch?v=pihE-4HWZx0',
+    video: 'https://www.youtube.com/watch?v=wFaEYG-nMh8',
     muscle: 'Biceps',
   },
   {
@@ -37,7 +37,7 @@ const lifts = [
     name: 'Concentration Curls',
     description:
       'Concentration curls target the biceps muscles and are performed sitting on a bench with the elbow resting on the inner thigh.',
-    video: 'https://www.youtube.com/watch?v=pihE-4HWZx0',
+    video: 'https://www.youtube.com/watch?v=wFaEYG-nMh8',
     muscle: 'Biceps',
   },
   // Chest exercises
@@ -46,7 +46,7 @@ const lifts = [
     name: 'Bench Press',
     description:
       'The bench press primarily targets the chest muscles (pectoralis major), but also works the shoulders and triceps.',
-    video: 'https://www.youtube.com/watch?v=pihE-4HWZx0',
+    video: 'https://www.youtube.com/watch?v=2lbvjoIq4kM',
     muscle: 'Chest',
   },
   {
@@ -54,7 +54,7 @@ const lifts = [
     name: 'Push-Ups',
     description:
       'Push-ups are a bodyweight exercise that primarily targets the chest muscles, along with the shoulders and triceps.',
-    video: 'https://www.youtube.com/watch?v=pihE-4HWZx0',
+    video: 'https://www.youtube.com/watch?v=2lbvjoIq4kM',
     muscle: 'Chest',
   },
   {
@@ -62,7 +62,7 @@ const lifts = [
     name: 'Dumbbell Flyes',
     description:
       'Dumbbell flyes isolate the chest muscles and are performed lying on a bench with dumbbells in hand.',
-    video: 'https://www.youtube.com/watch?v=pihE-4HWZx0',
+    video: 'https://www.youtube.com/watch?v=2lbvjoIq4kM',
     muscle: 'Chest',
   },
   {
@@ -70,7 +70,7 @@ const lifts = [
     name: 'Incline Bench Press',
     description:
       'Incline bench press targets the upper chest muscles and is performed on an inclined bench.',
-    video: 'https://www.youtube.com/watch?v=pihE-4HWZx0',
+    video: 'https://www.youtube.com/watch?v=2lbvjoIq4kM',
     muscle: 'Chest',
   },
   {
@@ -78,7 +78,7 @@ const lifts = [
     name: 'Chest Dips',
     description:
       'Chest dips primarily target the lower chest muscles and are performed using parallel bars.',
-    video: 'https://www.youtube.com/watch?v=pihE-4HWZx0',
+    video: 'https://www.youtube.com/watch?v=KVwb7_brG_8',
     muscle: 'Chest',
   },
   // Front Delt exercises
@@ -87,7 +87,7 @@ const lifts = [
     name: 'Shoulder Press',
     description:
       'Shoulder press targets the deltoid muscles and is performed by pressing a weight overhead while seated or standing.',
-    video: 'https://www.youtube.com/watch?v=pihE-4HWZx0',
+    video: 'https://www.youtube.com/watch?v=2lbvjoIq4kM',
     muscle: 'Front Delts',
   },
   {
@@ -95,7 +95,7 @@ const lifts = [
     name: 'Lateral Raises',
     description:
       'Lateral raises isolate the lateral deltoid muscles and are performed by raising the arms to the sides against resistance.',
-    video: 'https://www.youtube.com/watch?v=pihE-4HWZx0',
+    video: 'https://www.youtube.com/watch?v=2lbvjoIq4kM',
     muscle: 'Front Delts',
   },
   {
@@ -103,7 +103,7 @@ const lifts = [
     name: 'Front Raises',
     description:
       'Front raises target the anterior deltoid muscles and are performed by raising the arms to the front against resistance.',
-    video: 'https://www.youtube.com/watch?v=pihE-4HWZx0',
+    video: 'https://www.youtube.com/watch?v=2lbvjoIq4kM',
     muscle: 'Front Delts',
   },
   {
@@ -111,7 +111,7 @@ const lifts = [
     name: 'Military Press',
     description:
       'Military press is a compound exercise that targets the front delts along with other shoulder muscles, such as the triceps and upper back.',
-    video: 'https://www.youtube.com/watch?v=pihE-4HWZx0',
+    video: 'https://www.youtube.com/watch?v=2lbvjoIq4kM',
     muscle: 'Front Delts',
   },
   {
@@ -119,7 +119,7 @@ const lifts = [
     name: 'Upright Rows',
     description:
       'Upright rows primarily target the front deltoids and upper traps, along with other muscles of the shoulder and upper back.',
-    video: 'https://www.youtube.com/watch?v=pihE-4HWZx0',
+    video: 'https://www.youtube.com/watch?v=2lbvjoIq4kM',
     muscle: 'Front Delts',
   },
   // Traps exercises
@@ -128,7 +128,7 @@ const lifts = [
     name: 'Barbell Shrugs',
     description:
       'Barbell shrugs target the trapezius muscles and are performed by lifting the shoulders in a shrugging motion against resistance.',
-    video: 'https://www.youtube.com/watch?v=pihE-4HWZx0',
+    video: 'https://www.youtube.com/watch?v=2lbvjoIq4kM',
     muscle: 'Traps',
   },
   {
@@ -136,7 +136,7 @@ const lifts = [
     name: 'Dumbbell Shrugs',
     description:
       'Dumbbell shrugs isolate the trapezius muscles and are performed by lifting the shoulders in a shrugging motion against resistance using dumbbells.',
-    video: 'https://www.youtube.com/watch?v=pihE-4HWZx0',
+    video: 'https://www.youtube.com/watch?v=2lbvjoIq4kM',
     muscle: 'Traps',
   },
   {
@@ -144,7 +144,7 @@ const lifts = [
     name: 'Farmers Walk',
     description:
       'Farmers walk primarily targets the traps, along with other muscles of the upper body, core, and grip strength.',
-    video: 'https://www.youtube.com/watch?v=pihE-4HWZx0',
+    video: 'https://www.youtube.com/watch?v=2lbvjoIq4kM',
     muscle: 'Traps',
   },
   {
@@ -152,7 +152,7 @@ const lifts = [
     name: 'Behind The Back Shrug',
     description:
       'Behind the back shrug is a variation of the shrug exercise that targets the traps from a different angle by lifting the shoulders behind the body against resistance.',
-    video: 'https://www.youtube.com/watch?v=pihE-4HWZx0',
+    video: 'https://www.youtube.com/watch?v=2lbvjoIq4kM',
     muscle: 'Traps',
   },
   {
@@ -160,7 +160,7 @@ const lifts = [
     name: 'Face Pulls',
     description:
       'Face pulls target the traps, rear delts, and rotator cuff muscles, and are performed using a cable machine with a rope attachment.',
-    video: 'https://www.youtube.com/watch?v=pihE-4HWZx0',
+    video: 'https://www.youtube.com/watch?v=2lbvjoIq4kM',
     muscle: 'Traps',
   },
   // Neck exercises
@@ -168,35 +168,35 @@ const lifts = [
     id: 21,
     name: 'Placeholder Neck Exercise 1',
     description: 'Placeholder description for neck exercise 1.',
-    video: 'https://www.youtube.com/watch?v=pihE-4HWZx0',
+    video: 'https://www.youtube.com/watch?v=2lbvjoIq4kM',
     muscle: 'Neck',
   },
   {
     id: 22,
     name: 'Placeholder Neck Exercise 2',
     description: 'Placeholder description for neck exercise 2.',
-    video: 'https://www.youtube.com/watch?v=pihE-4HWZx0',
+    video: 'https://www.youtube.com/watch?v=2lbvjoIq4kM',
     muscle: 'Neck',
   },
   {
     id: 23,
     name: 'Placeholder Neck Exercise 3',
     description: 'Placeholder description for neck exercise 3.',
-    video: 'https://www.youtube.com/watch?v=pihE-4HWZx0',
+    video: 'https://www.youtube.com/watch?v=2lbvjoIq4kM',
     muscle: 'Neck',
   },
   {
     id: 24,
     name: 'Placeholder Neck Exercise 4',
     description: 'Placeholder description for neck exercise 4.',
-    video: 'https://www.youtube.com/watch?v=pihE-4HWZx0',
+    video: 'https://www.youtube.com/watch?v=2lbvjoIq4kM',
     muscle: 'Neck',
   },
   {
     id: 25,
     name: 'Placeholder Neck Exercise 5',
     description: 'Placeholder description for neck exercise 5.',
-    video: 'https://www.youtube.com/watch?v=pihE-4HWZx0',
+    video: 'https://www.youtube.com/watch?v=2lbvjoIq4kM',
     muscle: 'Neck',
   },
   // Abs exercises
@@ -205,7 +205,7 @@ const lifts = [
     name: 'Crunches',
     description:
       'Crunches target the rectus abdominis muscles and are performed by curling the upper body towards the knees while lying on the back.',
-    video: 'https://www.youtube.com/watch?v=pihE-4HWZx0',
+    video: 'https://www.youtube.com/watch?v=2lbvjoIq4kM',
     muscle: 'Abs',
   },
   {
@@ -213,7 +213,7 @@ const lifts = [
     name: 'Leg Raises',
     description:
       'Leg raises primarily target the lower abdominal muscles and are performed by raising the legs while lying on the back.',
-    video: 'https://www.youtube.com/watch?v=pihE-4HWZx0',
+    video: 'https://www.youtube.com/watch?v=2lbvjoIq4kM',
     muscle: 'Abs',
   },
   {
@@ -221,7 +221,7 @@ const lifts = [
     name: 'Russian Twists',
     description:
       'Russian twists target the obliques and core muscles and are performed by rotating the torso from side to side while holding a weight or medicine ball.',
-    video: 'https://www.youtube.com/watch?v=pihE-4HWZx0',
+    video: 'https://www.youtube.com/watch?v=2lbvjoIq4kM',
     muscle: 'Abs',
   },
   {
@@ -229,7 +229,7 @@ const lifts = [
     name: 'Plank',
     description:
       'Plank is an isometric exercise that targets the entire core, including the rectus abdominis, obliques, and transverse abdominis muscles.',
-    video: 'https://www.youtube.com/watch?v=pihE-4HWZx0',
+    video: 'https://www.youtube.com/watch?v=2lbvjoIq4kM',
     muscle: 'Abs',
   },
   {
@@ -237,7 +237,7 @@ const lifts = [
     name: 'Hanging Leg Raises',
     description:
       'Hanging leg raises target the lower abs and hip flexors and are performed by hanging from a bar and raising the legs.',
-    video: 'https://www.youtube.com/watch?v=pihE-4HWZx0',
+    video: 'https://www.youtube.com/watch?v=2lbvjoIq4kM',
     muscle: 'Abs',
   },
   // Forearms exercises
@@ -246,7 +246,7 @@ const lifts = [
     name: 'Wrist Curls',
     description:
       'Wrist curls target the forearm muscles and are performed by curling the wrist while holding a weight.',
-    video: 'https://www.youtube.com/watch?v=pihE-4HWZx0',
+    video: 'https://www.youtube.com/watch?v=2lbvjoIq4kM',
     muscle: 'Forearms',
   },
   {
@@ -254,7 +254,7 @@ const lifts = [
     name: 'Reverse Wrist Curls',
     description:
       'Reverse wrist curls target the forearm muscles and are performed by curling the wrist in the opposite direction against resistance.',
-    video: 'https://www.youtube.com/watch?v=pihE-4HWZx0',
+    video: 'https://www.youtube.com/watch?v=2lbvjoIq4kM',
     muscle: 'Forearms',
   },
   {
@@ -262,7 +262,7 @@ const lifts = [
     name: 'Forearm Pronation and Supination',
     description:
       'Forearm pronation and supination exercises target the muscles responsible for rotating the forearm and are performed by rotating the wrist with a weight in hand.',
-    video: 'https://www.youtube.com/watch?v=pihE-4HWZx0',
+    video: 'https://www.youtube.com/watch?v=2lbvjoIq4kM',
     muscle: 'Forearms',
   },
   {
@@ -270,7 +270,7 @@ const lifts = [
     name: 'Barbell Reverse Curls',
     description:
       'Barbell reverse curls target the brachioradialis muscle of the forearms and are performed by curling the barbell with an overhand grip.',
-    video: 'https://www.youtube.com/watch?v=pihE-4HWZx0',
+    video: 'https://www.youtube.com/watch?v=2lbvjoIq4kM',
     muscle: 'Forearms',
   },
   {
@@ -278,7 +278,7 @@ const lifts = [
     name: 'Plate Pinch Grip',
     description:
       'Plate pinch grip exercises target the forearm muscles and grip strength and are performed by holding weight plates together with the fingertips.',
-    video: 'https://www.youtube.com/watch?v=pihE-4HWZx0',
+    video: 'https://www.youtube.com/watch?v=2lbvjoIq4kM',
     muscle: 'Forearms',
   },
   // Quads exercises
@@ -287,7 +287,7 @@ const lifts = [
     name: 'Squats',
     description:
       'Squats are a compound exercise that primarily target the quadriceps muscles, along with the glutes, hamstrings, and lower back.',
-    video: 'https://www.youtube.com/watch?v=pihE-4HWZx0',
+    video: 'https://www.youtube.com/watch?v=2lbvjoIq4kM',
     muscle: 'Quads',
   },
   {
@@ -295,7 +295,7 @@ const lifts = [
     name: 'Leg Press',
     description:
       'Leg press primarily targets the quadriceps muscles and is performed by pressing weight away from the body using the legs while seated.',
-    video: 'https://www.youtube.com/watch?v=pihE-4HWZx0',
+    video: 'https://www.youtube.com/watch?v=2lbvjoIq4kM',
     muscle: 'Quads',
   },
   {
@@ -303,7 +303,7 @@ const lifts = [
     name: 'Lunges',
     description:
       'Lunges target the quadriceps, glutes, and hamstrings and are performed by stepping forward or backward into a lunge position while holding weights.',
-    video: 'https://www.youtube.com/watch?v=pihE-4HWZx0',
+    video: 'https://www.youtube.com/watch?v=2lbvjoIq4kM',
     muscle: 'Quads',
   },
   {
@@ -311,7 +311,7 @@ const lifts = [
     name: 'Hack Squats',
     description:
       'Hack squats target the quadriceps muscles and are performed using a hack squat machine or a barbell.',
-    video: 'https://www.youtube.com/watch?v=pihE-4HWZx0',
+    video: 'https://www.youtube.com/watch?v=2lbvjoIq4kM',
     muscle: 'Quads',
   },
   {
@@ -319,7 +319,7 @@ const lifts = [
     name: 'Step-Ups',
     description:
       'Step-ups primarily target the quadriceps, along with the glutes and hamstrings, and are performed by stepping onto a raised platform with one leg.',
-    video: 'https://www.youtube.com/watch?v=pihE-4HWZx0',
+    video: 'https://www.youtube.com/watch?v=2lbvjoIq4kM',
     muscle: 'Quads',
   },
   // Obliques exercises
@@ -328,7 +328,7 @@ const lifts = [
     name: 'Russian Twists',
     description:
       'Russian twists target the obliques and core muscles and are performed by rotating the torso from side to side while holding a weight or medicine ball.',
-    video: 'https://www.youtube.com/watch?v=pihE-4HWZx0',
+    video: 'https://www.youtube.com/watch?v=2lbvjoIq4kM',
     muscle: 'Obliques',
   },
   {
@@ -336,7 +336,7 @@ const lifts = [
     name: 'Side Plank',
     description:
       'Side plank primarily targets the obliques and lateral core muscles and is performed by supporting the body on one forearm and the side of the foot.',
-    video: 'https://www.youtube.com/watch?v=pihE-4HWZx0',
+    video: 'https://www.youtube.com/watch?v=2lbvjoIq4kM',
     muscle: 'Obliques',
   },
   {
@@ -344,7 +344,7 @@ const lifts = [
     name: 'Woodchoppers',
     description:
       'Woodchoppers target the obliques and core muscles and are performed by rotating the torso while holding a weight or resistance band.',
-    video: 'https://www.youtube.com/watch?v=pihE-4HWZx0',
+    video: 'https://www.youtube.com/watch?v=2lbvjoIq4kM',
     muscle: 'Obliques',
   },
   {
@@ -352,7 +352,7 @@ const lifts = [
     name: 'Bicycle Crunches',
     description:
       'Bicycle crunches target the obliques and core muscles and are performed by bringing the elbow to the opposite knee while lying on the back and pedaling the legs in a bicycle motion.',
-    video: 'https://www.youtube.com/watch?v=pihE-4HWZx0',
+    video: 'https://www.youtube.com/watch?v=2lbvjoIq4kM',
     muscle: 'Obliques',
   },
   {
@@ -360,7 +360,7 @@ const lifts = [
     name: 'Standing Side Crunches',
     description:
       'Standing side crunches target the obliques and core muscles and are performed by bending sideways at the waist while holding a weight.',
-    video: 'https://www.youtube.com/watch?v=pihE-4HWZx0',
+    video: 'https://www.youtube.com/watch?v=2lbvjoIq4kM',
     muscle: 'Obliques',
   },
   // Upper Back exercises
@@ -369,7 +369,7 @@ const lifts = [
     name: 'Pull-Ups',
     description:
       'Pull-ups primarily target the upper back muscles, including the latissimus dorsi and traps, along with the biceps and forearms.',
-    video: 'https://www.youtube.com/watch?v=pihE-4HWZx0',
+    video: 'https://www.youtube.com/watch?v=2lbvjoIq4kM',
     muscle: 'Upper Back',
   },
   {
@@ -377,7 +377,7 @@ const lifts = [
     name: 'Seated Cable Rows',
     description:
       'Seated cable rows target the upper back muscles, including the lats and rhomboids, and are performed using a cable machine with a rowing attachment.',
-    video: 'https://www.youtube.com/watch?v=pihE-4HWZx0',
+    video: 'https://www.youtube.com/watch?v=2lbvjoIq4kM',
     muscle: 'Upper Back',
   },
   {
@@ -385,7 +385,7 @@ const lifts = [
     name: 'Bent Over Rows',
     description:
       'Bent over rows target the upper back muscles, including the traps and rhomboids, along with the biceps and forearms.',
-    video: 'https://www.youtube.com/watch?v=pihE-4HWZx0',
+    video: 'https://www.youtube.com/watch?v=2lbvjoIq4kM',
     muscle: 'Upper Back',
   },
   {
@@ -393,7 +393,7 @@ const lifts = [
     name: 'T-Bar Rows',
     description:
       'T-bar rows target the upper back muscles, including the lats and traps, and are performed using a T-bar rowing machine or a barbell attached to a landmine.',
-    video: 'https://www.youtube.com/watch?v=pihE-4HWZx0',
+    video: 'https://www.youtube.com/watch?v=2lbvjoIq4kM',
     muscle: 'Upper Back',
   },
   {
@@ -401,7 +401,7 @@ const lifts = [
     name: 'Face Pulls',
     description:
       'Face pulls target the traps, rear delts, and rotator cuff muscles, and are performed using a cable machine with a rope attachment.',
-    video: 'https://www.youtube.com/watch?v=pihE-4HWZx0',
+    video: 'https://www.youtube.com/watch?v=2lbvjoIq4kM',
     muscle: 'Upper Back',
   },
   // Rear Delts exercises
@@ -410,7 +410,7 @@ const lifts = [
     name: 'Reverse Flyes',
     description:
       'Reverse flyes target the rear deltoids and are performed by raising the arms to the sides against resistance while bent over.',
-    video: 'https://www.youtube.com/watch?v=pihE-4HWZx0',
+    video: 'https://www.youtube.com/watch?v=2lbvjoIq4kM',
     muscle: 'Rear Delts',
   },
   {
@@ -418,7 +418,7 @@ const lifts = [
     name: 'Face Pulls',
     description:
       'Face pulls target the traps, rear delts, and rotator cuff muscles, and are performed using a cable machine with a rope attachment.',
-    video: 'https://www.youtube.com/watch?v=pihE-4HWZx0',
+    video: 'https://www.youtube.com/watch?v=2lbvjoIq4kM',
     muscle: 'Rear Delts',
   },
   {
@@ -426,7 +426,7 @@ const lifts = [
     name: 'Rear Delt Fly Machine',
     description:
       'Rear delt fly machine isolates the rear deltoids and is performed using a specialized machine with a rear delt fly arm.',
-    video: 'https://www.youtube.com/watch?v=pihE-4HWZx0',
+    video: 'https://www.youtube.com/watch?v=2lbvjoIq4kM',
     muscle: 'Rear Delts',
   },
   {
@@ -656,7 +656,7 @@ const lifts = [
     name: 'Deadlifts',
     description:
       'Deadlifts target the hamstrings along with the glutes, lower back, and traps, and are performed by lifting a barbell or other weighted object from the ground to an upright position.',
-    video: 'https://www.youtube.com/watch?v=pihE-4HWZx0',
+    video: 'https://www.youtube.com/watch?v=2lbvjoIq4kM',
     muscle: 'Ham Strings',
   },
   {
@@ -664,7 +664,7 @@ const lifts = [
     name: 'Romanian Deadlifts',
     description:
       'Romanian deadlifts target the hamstrings and lower back and are performed by bending forward at the hips while keeping the knees slightly bent and the back straight, then returning to an upright position.',
-    video: 'https://www.youtube.com/watch?v=pihE-4HWZx0',
+    video: 'https://www.youtube.com/watch?v=2lbvjoIq4kM',
     muscle: 'Ham Strings',
   },
   {
@@ -672,7 +672,7 @@ const lifts = [
     name: 'Leg Curls',
     description:
       'Leg curls target the hamstrings and are performed by curling the legs towards the buttocks while lying face down on a leg curl machine.',
-    video: 'https://www.youtube.com/watch?v=pihE-4HWZx0',
+    video: 'https://www.youtube.com/watch?v=2lbvjoIq4kM',
     muscle: 'Ham Strings',
   },
   {
@@ -680,7 +680,7 @@ const lifts = [
     name: 'Good Mornings',
     description:
       'Good mornings target the hamstrings and lower back and are performed by bending forward at the hips while holding a barbell on the shoulders.',
-    video: 'https://www.youtube.com/watch?v=pihE-4HWZx0',
+    video: 'https://www.youtube.com/watch?v=2lbvjoIq4kM',
     muscle: 'Ham Strings',
   },
   {
@@ -688,7 +688,7 @@ const lifts = [
     name: 'Glute Ham Raises',
     description:
       'Glute ham raises primarily target the hamstrings and glutes and are performed by kneeling on a glute ham raise machine or apparatus and then lowering and raising the body while keeping the torso straight.',
-    video: 'https://www.youtube.com/watch?v=pihE-4HWZx0',
+    video: 'https://www.youtube.com/watch?v=2lbvjoIq4kM',
     muscle: 'Ham Strings',
   },
 ];
