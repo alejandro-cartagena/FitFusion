@@ -4,11 +4,11 @@
 
 body {
   margin: 0;
-  background-color: #E7E8E8;
+  background-color: #e7e8e8;
 }
 
 p {
-    color: #444343;
+  color: #444343;
 }
 
 .layout {
@@ -21,14 +21,15 @@ p {
 /*REUSABLE BUTTONS */
 /******************/
 
-.learn-more-link,.btn {
-    font-family: 'Saira Condensed', sans-serif;
-    text-transform: uppercase;
-    font-weight: 600;
-    text-decoration: none;
-    background-color: #E73539;
-    color: #FFFFFF;
-    padding: 0.25em 1em;
+.learn-more-link,
+.btn {
+  font-family: 'Saira Condensed', sans-serif;
+  text-transform: uppercase;
+  font-weight: 600;
+  text-decoration: none;
+  background-color: #e73539;
+  color: #ffffff;
+  padding: 0.25em 1em;
 }
 
 /****************/
@@ -94,7 +95,6 @@ nav {
   width: 2.25rem;
   height: 2rem;
 }
-
 
 .burger-menu span {
   height: 0.4rem;
@@ -196,208 +196,205 @@ footer p {
   }
 }
 
-
 /*********************/
 /* HOME PAGE STYLES */
 /*******************/
 
 .home-hero {
-    height: 600px;
-    background-image: url('./images/bg-img.jpg');
-    background-size: 1300px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: #000000;
+  height: 600px;
+  background-image: url('./images/bg-img.jpg');
+  background-size: 1300px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #000000;
 }
 
 .home-title {
-    font-family: 'Saira Condensed', sans-serif;
-    font-weight: 600;
-    font-size: 2.85rem;
-    color: #FFFFFF;
-    text-transform: uppercase;
-    width: 55%;
-    padding-top: 100px;
+  font-family: 'Saira Condensed', sans-serif;
+  font-weight: 600;
+  font-size: 2.85rem;
+  color: #ffffff;
+  text-transform: uppercase;
+  width: 55%;
+  padding-top: 100px;
 }
 
 .home-card-icon-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .home-card-icon {
-    width: 50px;
-    margin-bottom: 1em;
+  width: 50px;
+  margin-bottom: 1em;
 }
 
 .home-card-icon-text {
-    font-family: 'Saira Condensed', sans-serif;
-    text-transform: uppercase;
-    color: #E73539;
-    font-weight: 600;
+  font-family: 'Saira Condensed', sans-serif;
+  text-transform: uppercase;
+  color: #e73539;
+  font-weight: 600;
 }
 
 .home-card {
-    max-width: 420px;
-    min-width: 320px;
-    padding: 2em;
-    justify-content: space-between;
-    background-color: #FFFFFF;
-    display: flex;
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: -83px;
-    /* margin-bottom: 4em; */
-    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  max-width: 420px;
+  min-width: 320px;
+  padding: 2em;
+  justify-content: space-between;
+  background-color: #ffffff;
+  display: flex;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: -83px;
+  /* margin-bottom: 4em; */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
 /* HOME SECTIONS STYLES*/
 .section {
-    padding: 4em 0;
-    display: flex;
-    flex-direction: column;
+  padding: 4em 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .home-section-nutrition {
-    background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
 .section-heading {
-    font-family: 'Saira Condensed', sans-serif;
-    font-weight: 600;
-    text-transform: uppercase;
-    border-left: solid #E73539;
-    padding-left: 0.25em;
-    margin-bottom: 0.5em;
+  font-family: 'Saira Condensed', sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-left: solid #e73539;
+  padding-left: 0.25em;
+  margin-bottom: 0.5em;
 }
 
 .home-section-img,
 .overview-section-img {
-    width: 100%;
-    margin-bottom: 1.25em;
-    order: -1
+  width: 100%;
+  margin-bottom: 1.25em;
+  order: -1;
 }
 
 .home-section-text {
-    margin-bottom: 2em;
+  margin-bottom: 2em;
 }
 
 .home-section-plans-heading {
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 2em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2em;
 }
 
 /* HOME PLANS CARD STYLES*/
 .plans-cards-container {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .plans-card {
-    width: 100%;
-    max-width: 475px;
-    min-width: 320px;
-    background-color: #D9D9D9;
-    border-radius: 8px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 3em 4em;
+  width: 100%;
+  max-width: 475px;
+  min-width: 320px;
+  background-color: #d9d9d9;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3em 4em;
 }
 
 .plans-card p {
-    text-align: center;
-    margin-bottom: 2em;
+  text-align: center;
+  margin-bottom: 2em;
 }
 
 .plans-card:not(:last-child) {
-    margin-bottom: 3em;
+  margin-bottom: 3em;
 }
 
 .plans-card-circle {
-    background-color: #000000;
-    border-radius: 50%;
-    padding: 1em;
-    margin-bottom: 1em;
+  background-color: #000000;
+  border-radius: 50%;
+  padding: 1em;
+  margin-bottom: 1em;
 }
 
 .plans-card-icon {
-    width: 75px;
+  width: 75px;
 }
 
 @media (max-width: 575px) {
-    .home-section{
-        padding-left: 1em;
-        padding-right: 1em;
-    }
+  .home-section {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
 }
 
 @media (min-width: 985px) {
-    .home-hero {
-        background-position: right;
-    }
+  .home-hero {
+    background-position: right;
+  }
 
-    .home-title {
-        font-size: 3.5rem;
-        width: 35%;
-    }
+  .home-title {
+    font-size: 3.5rem;
+    width: 35%;
+  }
 
-    .home-card-icon {
-        width: 75px;
-    }
+  .home-card-icon {
+    width: 75px;
+  }
 
-    .home-card {
-        margin-top: -98px;
-    }
+  .home-card {
+    margin-top: -98px;
+  }
 
-    .section {
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-    }
+  .section {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
 
-    .overview-section-img,
-    .home-section-img {
-        /* max-width: 550px; */
-        width: 45%;
-    }
+  .overview-section-img,
+  .home-section-img {
+    /* max-width: 550px; */
+    width: 45%;
+  }
 
-    .home-section-img {
-      order: 1
-    }
+  .home-section-img {
+    order: 1;
+  }
 
-    .section-text-container {
-        /* max-width: 630px; */
-        width: 40%;
-    }
+  .section-text-container {
+    /* max-width: 630px; */
+    width: 40%;
+  }
 
-    .home-section-nutrition-img,
-    .overview-section-img {
-        order: -1
-    }
+  .home-section-nutrition-img,
+  .overview-section-img {
+    order: -1;
+  }
 
-    .home-section-plans {
-        flex-direction: column;
-        align-items: flex-start;
-    }
+  .home-section-plans {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
-    .plans-cards-container {
-        flex-direction: row;  
-        justify-content: center;
-        margin-bottom: 2em;
-    }
+  .plans-cards-container {
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 2em;
+  }
 
-    .plans-card:not(:last-child) {
-        margin-bottom: 0;
-        margin-right: 3em;;
-    }
+  .plans-card:not(:last-child) {
+    margin-bottom: 0;
+    margin-right: 3em;
+  }
 }
-
 
 /**********************************/
 /* FITNESS OVERVIEW PAGE STYLES **/
@@ -408,7 +405,7 @@ footer p {
 */
 
 .fitness-nav {
-  margin: 2em 0
+  margin: 2em 0;
 }
 
 .fitness-nav a {
@@ -419,7 +416,7 @@ footer p {
 }
 
 .fitness-nav a:hover {
-  color: #E73539;
+  color: #e73539;
 }
 
 .overview-page-section {
@@ -445,7 +442,7 @@ footer p {
   margin-right: 1em;
 }
 
-.overview-section-p2{
+.overview-section-p2 {
   margin-bottom: 2em;
 }
 
@@ -457,7 +454,7 @@ footer p {
 }
 
 .max-reps-card {
-  background-color: #D9D9D9;
+  background-color: #d9d9d9;
   border-radius: 8px;
   width: 100%;
   display: flex;
@@ -497,7 +494,6 @@ footer p {
 }
 
 @media (min-width: 760px) {
-  
 }
 
 @media (min-width: 985px) {
@@ -515,10 +511,6 @@ footer p {
   }
 }
 
-
-
-
-
 /* SVG STYLES */
 .flexAna {
   display: flex;
@@ -527,25 +519,31 @@ footer p {
   fill: purple;
 }
 .muscle .muscleChild {
-  fill: #E73539;
+  fill: #e73539;
 }
 .muscle:hover .muscleChild {
   fill: purple;
   cursor: pointer;
 }
 /* SVG Transition */
-.anatomy-container {
-    perspective: 20% /* Adjust the perspective for a closer 3D effect */
+/* .anatomy-container {
+    perspective: 20% 
 }
 
 .anatomy-content {
     width: 100%;
     height: 100%;
-    transition: transform 0.5s ease; /* Transition effect */
-    transform-style: preserve-3d; /* Ensure 3D transformations are preserved */
-    transform-origin: center top; /* Set the transform origin to the center */
+    transition: transform 0.5s ease; 
+    transform-style: preserve-3d; 
+    transform-origin: center top; 
 }
 
 .anatomy-container.back .anatomy-content {
-    transform: rotateY(180deg); /* Rotate to the back and scale down */
+    transform: rotateY(180deg);
+} */
+
+/* Modal styles */
+.modalFlex{
+  display: flex;
+  justify-content: space-between;
 }

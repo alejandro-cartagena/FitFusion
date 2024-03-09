@@ -1,8 +1,23 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import lifts from '../data/lifts';
+import Modal from './Modal';
 
 export default function AnatomyBack() {
+    // Declare a slice of state for current 5 lifts
+  const [modalLifts, setModalLifts] = useState([]);
+  const [isModalOpen, setIsModalOpen] = useState(false)
+  // Create a function that will set that state to an array of filtered objects based on the class name. Example: abs
+  const renderModal = (muscle) => {
+    setModalLifts(lifts.filter((el) => el.muscle == muscle));
+    setIsModalOpen(true)
+  };
+  // Then pass that state onto a modal component that will render it from props
+  useEffect(() => {
+    // console.log(modalLifts);
+  }, [modalLifts]);
   return (
     <div>
+      <Modal modalLifts={modalLifts} isModalOpen={isModalOpen}/> 
       <svg
         width="312"
         height="760"
@@ -34,7 +49,7 @@ export default function AnatomyBack() {
           d="M174.699 499.319C174.977 501.964 175.238 504.565 175.464 507.091C176.629 518.973 177.725 530.183 178.942 535.788C179.69 539.36 181.725 544.263 184.456 549.464C179.29 522.306 192.804 493.056 182.212 466.929C180.177 477.736 177.255 488.542 174.699 499.319Z"
           fill="white"
         />
-        <g className='traps muscle'>
+        <g className='traps muscle' onClick={() => renderModal('Traps')}>
         <path
         // Traps
         className='muscleChild'
@@ -58,7 +73,7 @@ export default function AnatomyBack() {
           d="M233.416 682.308V682.323C235.537 688.735 239.12 694.504 244.112 699.526C243.486 698.106 242.842 696.402 242.216 694.355C239.259 684.759 240.616 674.416 241.903 664.417L242.077 663.117C243.086 657.601 244.303 651.981 245.468 646.571C250.791 622.014 255.817 598.757 245.712 576.008C247.886 594.676 245.295 613.315 241.868 631.938V631.968V632.058C241.833 632.267 241.781 632.461 241.729 632.671C238.598 649.246 234.911 665.792 233.416 682.308Z"
           fill="white"
         />
-        <g className='calves muscle'>
+        <g className='calves muscle' onClick={() => renderModal('Calves')}>
         <path
         // Calves
         className='muscleChild'
@@ -84,7 +99,7 @@ export default function AnatomyBack() {
           fill="white"
         />
         </g>
-        <g className='rearDelt muscle'>
+        <g className='rearDelt muscle' onClick={() => renderModal('Rear Delts')}>
         <path
         // Rear delt
         className='muscleChild'
@@ -97,7 +112,7 @@ export default function AnatomyBack() {
           d="M243.138 175.487C251.643 179.269 260.931 180.778 269.122 185.247C274.166 188.012 278.48 191.659 282.567 195.471C283.402 193.258 285.332 187.773 286.515 181.241C288.063 172.737 281.228 151.588 277.106 142.635C274.601 137.194 269.453 135.146 264.896 133.338C263.383 132.74 261.922 132.157 260.67 131.499C252.565 132.501 245.851 135.894 239.242 141.334C227.694 150.84 229.537 169.449 243.138 175.487Z"
           fill="white"
         /></g>
-        <g className='upperBack muscle'>
+        <g className='upperBack muscle' onClick={() => renderModal('Upper Back')}>
         <path
         // Upper back
         className='muscleChild'
@@ -110,7 +125,7 @@ export default function AnatomyBack() {
           d="M153.515 224.617C153.411 230.371 152.976 236.155 153.045 241.925C153.115 246.453 146.158 241.969 144.384 239.817C141.932 236.828 139.34 233.958 136.94 230.939C129.427 221.493 121.287 212.211 115.373 201.913C107.199 187.699 112.939 174.381 116.643 160.033C118.156 154.129 119.617 147.403 113.234 143.591C109.79 141.529 104.381 141.2 100.416 140.677C98.5202 140.423 96.694 140.348 94.7808 140.243C89.1631 139.93 75.8057 139.392 77.2667 130.887C88.7457 132.576 103.512 130.648 110.086 129.781C117.548 128.794 124.731 126.822 131.114 123.817C142.019 129.019 149.724 136.94 152.889 147.702C156.785 160.795 153.759 175.188 153.185 188.491C152.663 200.478 153.706 212.585 153.515 224.617Z"
           fill="white"
         /></g>
-        <g className='lats muscle'>
+        <g className='lats muscle' onClick={() => renderModal('Lats')}>
         <path
         // Lats
         className="muscleChild"
@@ -148,7 +163,7 @@ export default function AnatomyBack() {
           fill="white"
         />
         </g>
-        <g className='triceps muscle'>
+        <g className='triceps muscle' onClick={() => renderModal('Triceps')}>
         <path
         // Triceps
         className='muscleChild'
@@ -212,7 +227,7 @@ export default function AnatomyBack() {
           d="M273.626 301.277C279.54 312.891 282.984 325.73 283.714 338.509C285.836 345.205 289.262 353.336 290.723 359.972C291.402 363.081 291.836 366.235 292.567 369.329C293.784 374.351 300.724 377.504 301.559 369.941C303.42 352.828 302.028 332.874 300.62 315.91V315.88C299.089 311.799 297.211 307.764 294.932 303.773C290.08 295.269 285.192 287.272 281.888 278.573C281.714 286.719 278.931 294.432 273.626 301.277Z"
           fill="white"
         />
-        <g className='glutes muscle'>
+        <g className='glutes muscle' onClick={() => renderModal('Glutes')}>
         <path
         // Glutes
         className='muscleChild'
@@ -258,7 +273,7 @@ export default function AnatomyBack() {
           d="M158.576 418.219C159.15 422.09 160.941 428.637 162.993 436.2C166.054 447.38 169.829 461.28 171.672 473.626C172.681 480.381 173.551 488.273 174.351 496.06C181.047 468.409 189.465 440.474 178.073 413.107C170.942 410.686 164.454 407.398 160.089 401.613C159.776 401.21 159.497 400.776 159.237 400.328C158.68 403.302 157.48 410.835 158.576 418.219Z"
           fill="white"
         />
-        <g className='hamString muscle'>
+        <g className='hamString muscle' onClick={() => renderModal('Ham Strings')}>
         <path
         // Hamstring
         className='muscleChild'
@@ -297,7 +312,7 @@ export default function AnatomyBack() {
           d="M135.792 125.013C134.662 124.37 133.514 123.757 132.348 123.189C137.27 120.738 141.688 117.659 145.323 113.922C146.332 112.966 147.202 112.024 147.81 111.112C150.645 107.585 152.819 103.564 154.193 99.0355C154.402 98.3629 154.576 97.6754 154.715 96.9879C154.472 104.102 153.376 114.774 149.063 118.63C144.993 122.247 139.427 124.489 135.792 125.013ZM131.183 123.772C131.183 123.757 131.2 123.772 131.183 123.772V123.772Z"
           fill="#A89FA8"
         />
-        <g className='lowerBack muscle'>
+        <g className='lowerBack muscle' onClick={() => renderModal('Lower Back')}>
         <path
         // Lower nack
         className='muscleChild'
