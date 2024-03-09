@@ -547,11 +547,7 @@ footer p {
   display: flex;
   justify-content: space-between;
 }
-.vidFlex{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+
 .liftItem{
   list-style: none;
   margin: 1.5rem 0;
@@ -560,4 +556,11 @@ footer p {
 .liftItem:hover{
   cursor: pointer;
   color: red;
+}
+.muscleTitle{
+  text-align: center;
+}
+.descriptionText{
+  max-width: 800px; /* Adjust the value as needed */
+  word-wrap: break-word; /* or overflow-wrap: break-word; */
 }
