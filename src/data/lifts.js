@@ -88,7 +88,7 @@ const lifts = [
     description:
       'Shoulder press targets the deltoid muscles and is performed by pressing a weight overhead while seated or standing.',
     video: 'https://example.com/shoulder_press_video',
-    muscle: 'front delts',
+    muscle: 'frontDelt',
   },
   {
     id: 12,
@@ -96,7 +96,7 @@ const lifts = [
     description:
       'Lateral raises isolate the lateral deltoid muscles and are performed by raising the arms to the sides against resistance.',
     video: 'https://example.com/lateral_raises_video',
-    muscle: 'front delts',
+    muscle: 'frontDelt',
   },
   {
     id: 13,
@@ -104,7 +104,7 @@ const lifts = [
     description:
       'Front raises target the anterior deltoid muscles and are performed by raising the arms to the front against resistance.',
     video: 'https://example.com/front_raises_video',
-    muscle: 'front delts',
+    muscle: 'frontDelt',
   },
   {
     id: 14,
@@ -112,7 +112,7 @@ const lifts = [
     description:
       'Military press is a compound exercise that targets the front delts along with other shoulder muscles, such as the triceps and upper back.',
     video: 'https://example.com/military_press_video',
-    muscle: 'front delts',
+    muscle: 'frontDelt',
   },
   {
     id: 15,
@@ -120,7 +120,7 @@ const lifts = [
     description:
       'Upright rows primarily target the front deltoids and upper traps, along with other muscles of the shoulder and upper back.',
     video: 'https://example.com/upright_rows_video',
-    muscle: 'front delts',
+    muscle: 'frontDelt',
   },
   // Traps exercises
   {
