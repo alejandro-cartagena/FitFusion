@@ -541,3 +541,9 @@ footer p {
 .anatomy-container.back .anatomy-content {
     transform: rotateY(180deg);
 } */
+
+/* Modal styles */
+.modalFlex{
+  display: flex;
+  justify-content: space-between;
+}

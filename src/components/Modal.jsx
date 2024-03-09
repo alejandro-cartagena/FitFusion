@@ -3,6 +3,16 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
+import YouTube from 'react-youtube';
+
+  const opts = {
+      height: '315',
+      width: '560',
+      playerVars: {
+        // https://developers.google.com/youtube/player_parameters
+        autoplay: 0,
+      },
+    };
 
 const style = {
   position: 'absolute',
@@ -10,7 +20,7 @@ const style = {
   left: '50%',
   transform: 'translate(-50%, -50%)',
   width: '50%',
-  height: '30%',
+  height: '50%',
   bgcolor: 'background.paper',
   border: '2px solid #000',
   boxShadow: 24,
@@ -37,12 +47,13 @@ export default function BasicModal(props) {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-          <Typography id="modal-modal-title" variant="h6" component="h2">
-           {open ? props.modalLifts[0].muscle : ''}
-          </Typography>
-          <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-            Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-          </Typography>
+           <h2>{open ? props.modalLifts[0].muscle : ''}</h2>
+            <div className="modalFlex">
+                <ul>
+                    {props.modalLifts.map(el => <li key={el.id}>{el.name}</li>)}
+                </ul>
+             <YouTube videoId="pihE-4HWZx0" opts={opts} />
+            </div>
         </Box>
       </Modal>
     </div>
