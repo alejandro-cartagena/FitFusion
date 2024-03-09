@@ -248,7 +248,6 @@ footer p {
     margin-right: auto;
     margin-left: auto;
     margin-top: -83px;
-    /* margin-bottom: 4em; */
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 
@@ -516,6 +515,85 @@ footer p {
 }
 
 
+/*************************************/
+/* FITNESS CALCULATOR PAGE STYLES ***/
+/***********************************/
+
+.section-padding {
+  padding: 4em 0;
+}
+
+.one-rep-max-heading {
+  margin-bottom: 1em;
+}
+
+.calculator-info-text {
+  /* max-width: 1000px; */
+  letter-spacing: 0.5px;
+}
+
+
+/*ONE REP MAX CALCULATOR STYLES*/
+
+.one-rep-max-card {
+  background-color: #D9D9D9;
+  border-radius: 8px;
+  max-width: 550px;
+  margin: 0 auto;
+}
+
+.one-rep-max-header {
+  background-color: #000000;
+  display: flex;
+  align-items: center;
+  padding: 1em 2em;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.one-rep-max-header-icon {
+  width: 50px;
+}
+
+.one-rep-max-header-title {
+  color: #FFFFFF;
+  font-family: 'Saira Condensed', sans-serif;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 0;
+  margin-right: 0.5em;
+}
+
+.one-rep-max-card-form {
+  padding: 3em 2em;
+}
+
+.select-wrap,
+.input-wrap {
+  border: solid 1px #A9A9A9;
+  border-radius: 4px;
+  padding: 0.5em;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.select-label {
+  position: absolute;
+}
+
+select {
+  cursor: pointer
+}
+
+select,
+input {
+  border: none;
+  background-color: #D9D9D9;
+  width: 100%;
+  text-align: right;
+  
+}
 
 
 
