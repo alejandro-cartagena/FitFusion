@@ -1,20 +1,24 @@
 import React, { useEffect, useState } from 'react';
 import lifts from '../data/lifts';
+import Modal from './Modal';
 
 export default function AnatomyFront() {
   // Declare a slice of state for current 5 lifts
   const [modalLifts, setModalLifts] = useState([]);
+  const [isModalOpen, setIsModalOpen] = useState(false)
   // Create a function that will set that state to an array of filtered objects based on the class name. Example: abs
   const renderModal = (muscle) => {
-    setModalLifts(lifts.filter((el) => el.muscle == muscle))
+    setModalLifts(lifts.filter((el) => el.muscle == muscle));
+    setIsModalOpen(true)
   };
   // Then pass that state onto a modal component that will render it from props
   useEffect(() => {
-    console.log(modalLifts);
+    // console.log(modalLifts);
   }, [modalLifts]);
 
   return (
     <div>
+      <Modal modalLifts={modalLifts} isModalOpen={isModalOpen}/> 
       <svg
         width="312"
         height="760"
