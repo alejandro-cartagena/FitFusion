@@ -62,7 +62,7 @@ export default function BasicModal(props) {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-           <h2>{open ? props.modalLifts[0].muscle : ''}</h2>
+           <h2 className='muscleTitle'>{open ? props.modalLifts[0].muscle : ''}</h2>
             <div className="modalFlex">
                 <ul>
                     {props.modalLifts.map(el => <li className='liftItem' key={el.id} 
@@ -70,7 +70,7 @@ export default function BasicModal(props) {
                 </ul>
    
              <div className='vidFlex'>
-                <p> {currentVid.description}</p>
+                <p className='descriptionText'> {currentVid.description}</p>
                 {currentVid.video && <YouTube videoId={extractVideoId(currentVid.video)} opts={opts} />}
              </div>
              
