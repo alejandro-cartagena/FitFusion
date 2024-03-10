@@ -537,6 +537,7 @@ footer p {
   border-radius: 8px;
   max-width: 550px;
   margin: 0 auto;
+  margin-top: 3em;
 }
 
 .one-rep-max-header {
@@ -625,6 +626,14 @@ input {
   padding: 0 0.5em;
 }
 
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
+
 .input-container input {
   text-align: right;
 }
@@ -648,6 +657,46 @@ input {
 .select-inputs-container{
   display: flex;
   flex-direction: column;
+}
+
+/*ONE REP MAX SUBMITTED STYLE*/
+.one-rep-max-submitted-container {
+  padding: 3em 2em;
+}
+
+.one-rep-max-submitted-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2em
+}
+
+.one-rep-max-submitted-lift-text {
+  text-transform: capitalize;
+}
+
+.one-rep-max-submitted-btns {
+  margin-top: 2em;
+  text-align: center;
+}
+
+.one-rep-max-edit-btn {
+  width: 69px;
+  margin-right: 1em;
+}
+
+.one-rep-max-submitted-lift-text {
+  margin-bottom: 1em;
+}
+
+.table {
+  text-align: center;
+}
+
+.warning-message {
+  text-align: center;
+  color: #e73539;
+  margin-top: 2em;
 }
 
 
