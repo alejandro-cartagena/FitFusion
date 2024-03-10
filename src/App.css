@@ -511,6 +511,211 @@ footer p {
   }
 }
 
+
+/*************************************/
+/* FITNESS CALCULATOR PAGE STYLES ***/
+/***********************************/
+
+.section-padding {
+  padding: 4em 0;
+}
+
+.one-rep-max-heading {
+  margin-bottom: 1em;
+}
+
+.calculator-info-text {
+  /* max-width: 1000px; */
+  letter-spacing: 0.5px;
+}
+
+
+/*ONE REP MAX CALCULATOR STYLES*/
+
+.one-rep-max-card {
+  background-color: #D9D9D9;
+  border-radius: 8px;
+  max-width: 550px;
+  margin: 0 auto;
+  margin-top: 3em;
+}
+
+.one-rep-max-header {
+  background-color: #000000;
+  display: flex;
+  align-items: center;
+  padding: 1em 2em;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.one-rep-max-header-icon {
+  width: 50px;
+}
+
+.one-rep-max-header-title {
+  color: #FFFFFF;
+  font-family: 'Saira Condensed', sans-serif;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 0;
+  margin-right: 0.5em;
+}
+
+.one-rep-max-card-form {
+  padding: 3em 2em;
+}
+
+.select-wrap {
+  display: flex;
+  align-items: center;
+  position: relative;
+  border: solid 1px #A9A9A9;
+  border-radius: 4px;
+  margin-bottom: 1em;
+}
+
+.select-label {
+  position: absolute;
+  padding-left: 0.5em;
+}
+
+select {
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5em;
+  background-color: #D9D9D9;
+  width: 100%;
+  text-align: right;
+  border-right: 0.5em solid transparent;
+}
+
+.input-wrap {
+  display: flex;
+  align-items: center;
+  border: solid 1px #A9A9A9;
+  border-radius: 4px;
+  position: relative;
+}
+
+.input-label {
+  position: absolute;
+  cursor: text;
+  padding-left: 0.5em;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+input {
+  width: 100%;
+  padding: 0.5em;
+  background-color: #D9D9D9;
+  border: none;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-right: 1px solid #A9A9A9;
+}
+
+.input-text {
+  margin: 0;
+  padding: 0 0.5em;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
+
+.input-container input {
+  text-align: right;
+}
+
+.max-reps-limit-text {
+  margin-top: 1em;
+}
+
+.one-rep-max-btn-container {
+  margin-top: 3em;
+  display: flex;
+  justify-content: center;
+}
+
+.one-rep-max-btn:hover {
+  background-color: #000000;
+  color: #e73539;
+
+}
+
+.select-inputs-container{
+  display: flex;
+  flex-direction: column;
+}
+
+/*ONE REP MAX SUBMITTED STYLE*/
+.one-rep-max-submitted-container {
+  padding: 3em 2em;
+}
+
+.one-rep-max-submitted-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2em
+}
+
+.one-rep-max-submitted-lift-text {
+  text-transform: capitalize;
+}
+
+.one-rep-max-submitted-btns {
+  margin-top: 2em;
+  text-align: center;
+}
+
+.one-rep-max-edit-btn {
+  width: 69px;
+  margin-right: 1em;
+}
+
+.one-rep-max-submitted-lift-text {
+  margin-bottom: 1em;
+}
+
+.table {
+  text-align: center;
+}
+
+.warning-message {
+  text-align: center;
+  color: #e73539;
+  margin-top: 2em;
+}
+
+
+@media (min-width: 985px) {
+  .select-inputs-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .select-wrap {
+    width: 80%;
+  }
+
+  .select-wrap:first-child {
+    margin-right: 1em;
+  }
+}
+
+
 /* SVG STYLES */
 .flexAna {
   display: flex;
