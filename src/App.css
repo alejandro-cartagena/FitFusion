@@ -565,33 +565,106 @@ footer p {
   padding: 3em 2em;
 }
 
-.select-wrap,
-.input-wrap {
-  border: solid 1px #A9A9A9;
-  border-radius: 4px;
-  padding: 0.5em;
+.select-wrap {
   display: flex;
   align-items: center;
   position: relative;
+  border: solid 1px #A9A9A9;
+  border-radius: 4px;
+  margin-bottom: 1em;
 }
 
 .select-label {
   position: absolute;
+  padding-left: 0.5em;
 }
 
 select {
-  cursor: pointer
-}
-
-select,
-input {
+  cursor: pointer;
   border: none;
+  border-radius: 4px;
+  padding: 0.5em;
   background-color: #D9D9D9;
   width: 100%;
   text-align: right;
-  
+  border-right: 0.5em solid transparent;
 }
 
+.input-wrap {
+  display: flex;
+  align-items: center;
+  border: solid 1px #A9A9A9;
+  border-radius: 4px;
+  position: relative;
+}
+
+.input-label {
+  position: absolute;
+  cursor: text;
+  padding-left: 0.5em;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+input {
+  width: 100%;
+  padding: 0.5em;
+  background-color: #D9D9D9;
+  border: none;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-right: 1px solid #A9A9A9;
+}
+
+.input-text {
+  margin: 0;
+  padding: 0 0.5em;
+}
+
+.input-container input {
+  text-align: right;
+}
+
+.max-reps-limit-text {
+  margin-top: 1em;
+}
+
+.one-rep-max-btn-container {
+  margin-top: 3em;
+  display: flex;
+  justify-content: center;
+}
+
+.one-rep-max-btn:hover {
+  background-color: #000000;
+  color: #e73539;
+
+}
+
+.select-inputs-container{
+  display: flex;
+  flex-direction: column;
+}
+
+
+@media (min-width: 985px) {
+  .select-inputs-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .select-wrap {
+    width: 80%;
+  }
+
+  .select-wrap:first-child {
+    margin-right: 1em;
+  }
+}
 
 
 /* SVG STYLES */
