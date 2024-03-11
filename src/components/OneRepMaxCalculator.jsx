@@ -4,6 +4,7 @@ import Table from 'react-bootstrap/Table';
 
 export default function OneRepMaxCalculator() {
 
+    // Default state for the form
     const[formData, setFormData] = React.useState({
         unit: "lb",
         lift: "bench",
@@ -11,11 +12,12 @@ export default function OneRepMaxCalculator() {
         reps: ''
     })
 
-    const[isFormSubmitted, setIsFormSubmitted] = React.useState(false)
-    const[oneRepMax, setOneRepMax] = React.useState(null)
-    const[warningMessage, setWarningMessage] = React.useState(false) // For form validation
+    const[isFormSubmitted, setIsFormSubmitted] = React.useState(false)  // Used to know when to render the result and table
+    const[oneRepMax, setOneRepMax] = React.useState(null)               // Keeps track of the One Rep Max
+    const[warningMessage, setWarningMessage] = React.useState(false)    // For form validation
     
 
+    // Changes the state of the form everytime there is a change
     function handleChange(event) {
     
         setFormData(prevFormData => {
@@ -26,6 +28,7 @@ export default function OneRepMaxCalculator() {
         })
     }
 
+    // Submits the form and checks if all inputs are filled
     function handleSubmit(event) {
         event.preventDefault()
 
@@ -49,6 +52,16 @@ export default function OneRepMaxCalculator() {
         }
 
     }
+
+    // All formulas are commonly used to calculate 1rm.
+    // I used the Lombardi for Bench because it yields 
+    // a slightly lower result, since I find it is usually
+    // harder to max out on the Bench.
+
+    // The Epley and Brzycki formula yield a slighlty higher
+    // result and are both very similar. I used the Epley 
+    // formula to calculate the Squat and the Brzycki 
+    // formula for the Deadlift.
 
     // Lombardi Formula Bench
     function calculateOneRepMaxBench(weight, reps) {
@@ -98,10 +111,10 @@ export default function OneRepMaxCalculator() {
         return parseFloat(result.toFixed(1));
     }
 
+    // Creates the table showing 1rm - 10rm
     function createPercentTable() {
 
         const max = oneRepMax
-        console.log(max)
         const liftRepPercentages = [
             {repMax: 2, percentWhole: 97, percentDecimal: 0.97},
             {repMax: 3, percentWhole: 94, percentDecimal: 0.94},
@@ -138,6 +151,7 @@ export default function OneRepMaxCalculator() {
                 </Table>
     }
 
+    // Clears the form data and resets it to its default values
     function clearFormData() {
         setOneRepMax(null)
         formData.unit = 'lb'
@@ -146,10 +160,12 @@ export default function OneRepMaxCalculator() {
         formData.reps = ''
     }
 
+    // For when the user clicks the edit button
     function handleEditClick() {
         setIsFormSubmitted(false)
     }
 
+    // For when the user clicks the reset button
     function handleResetClick() {
         clearFormData()
         setIsFormSubmitted(false)
