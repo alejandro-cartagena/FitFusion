@@ -5,20 +5,20 @@ export default function Calculator() {
     return (
         <section className='section-padding'>
             <h2 className='section-heading one-rep-max-heading'>One rep max calculator</h2>
-            <p className='calculator-info-text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-                incididunt ut labore et dolore magna aliqua. Diam donec adipiscing tristique 
-                risus. Ac auctor augue mauris augue neque gravida in. Auctor elit sed vulputate 
-                mi sit amet mauris commodo. </p>
-            <p className='calculator-info-text'>Vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras tincidunt 
-                lobortis. Suspendisse ultrices gravida dictum fusce ut placerat orci nulla. 
-                Praesent tristique magna sit amet purus gravida. Ornare lectus sit amet est placerat. 
-                Bibendum enim facilisis gravida neque convallis a. Vitae proin sagittis 
-                nisl rhoncus mattis rhoncus urna. Integer vitae justo.</p>
-            <p className='calculator-info-text'>Convallis aenean et tortor at risus viverra. Morbi non arcu risus quis varius quam quisque.
-                 Tempus urna et pharetra pharetra. Amet venenatis urna cursus eget nunc scelerisque
-                  viverra mauris in. Felis donec et odio pellentesque diam volutpat. Ultrices neque
-                   ornare aenean euismod. Justo laoreet sit amet cursus sit. Facilisis volutpat est 
-                   velit egestas dui id ornare. Turpis tincidunt id.</p>
+            <p className='calculator-info-text'>Welcome to the One Rep Max Calculator – your gateway to optimizing 
+            your strength training journey. A One Rep Max (1RM) is the maximum weight an individual can lift for a 
+            single repetition in a given exercise. Understanding your 1RM provides valuable insights into your strength 
+            levels and helps tailor your workout intensities for optimal gains. It's a crucial metric for designing personalized 
+            training programs and tracking progress over time. </p>
+            <p className='calculator-info-text'>The One Rep Max Calculator simplifies this process by estimating your 1RM 
+            based on the weight lifted and the number of repetitions performed. While these values provide useful benchmarks, 
+            it's essential to recognize that 1RM calculators offer rough estimates. The true 1RM can vary based on factors
+             like fatigue, form, and individual differences.</p>
+            <p className='calculator-info-text'>Calculating your One Rep Max is vital for several reasons. It aids in setting 
+            realistic training goals, determining appropriate workout loads, and ensuring progressive overload – a key factor 
+            for muscle growth and strength gains. By understanding your 1RM, you can tailor your workout routine to match 
+            your fitness goals and maximize your training efficiency. Enjoy exploring the benefits of the One Rep Max 
+            Calculator as you embark on your journey toward strength and fitness excellence.</p>
 
             <OneRepMaxCalculator />
         </section>

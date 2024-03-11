@@ -29,10 +29,10 @@ export default function Home() {
                     <Container className="section home-section">
                         <div className="section-text-container home-section-text-container">    
                             <h2 className="section-heading home-section-heading">Fitness</h2>
-                            <p className="home-section-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                            sed do eiusmod tempor incididunt ut labore et dolore magna 
-                            aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                            ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            <p className="home-section-text">Unlock your fitness potential through three distinct sub-tabs. 
+                            Dive into Anatomy for muscle-specific lifts, calculate your one-rep max in Calculator,
+                             and master progressive overload in Progression. Everything you need for a well-rounded 
+                             fitness experience, all in one place.</p>
                             {/* Will add href prop later to Btn */}
                             <NavLink to={'fitness'} className="learn-more-link">Learn More</NavLink>
                             {/* <a className="learn-more-link" href="/fitness">Learn More</a> */}
