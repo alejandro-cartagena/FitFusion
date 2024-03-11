@@ -31,8 +31,8 @@ export default function OneRepMaxCalculator() {
 
         if (formData.weight != '' && formData.reps != '') {
             setWarningMessage(false)
-            const weight = formData.weight;
-            const reps = formData.reps;
+            const weight = Number(formData.weight);
+            const reps = Number(formData.reps);
             calculateOneRepMax(weight, reps);
             setIsFormSubmitted(true)
         } else {
@@ -42,7 +42,9 @@ export default function OneRepMaxCalculator() {
     }
 
     function calculateOneRepMax(weight, reps) {
+    
         if (reps === 1) {
+            console.log("YOOOO")
             const max = weight
             setOneRepMax(max)
         }
@@ -61,8 +63,8 @@ export default function OneRepMaxCalculator() {
     function createPercentTable() {
 
         const max = oneRepMax
+        console.log(max)
         const liftRepPercentages = [
-            {repMax: 1, percentWhole: 100, percentDecimal: 1.0},
             {repMax: 2, percentWhole: 97, percentDecimal: 0.97},
             {repMax: 3, percentWhole: 94, percentDecimal: 0.94},
             {repMax: 4, percentWhole: 92, percentDecimal: 0.92},
@@ -89,6 +91,10 @@ export default function OneRepMaxCalculator() {
                     </tr>
                     </thead>
                     <tbody>
+                        <tr>
+                            <td>100% - &#40;1-rep max&#41;</td>
+                            <td>{oneRepMax}</td>
+                        </tr>
                         {percentTable}
                     </tbody>
                 </Table>
