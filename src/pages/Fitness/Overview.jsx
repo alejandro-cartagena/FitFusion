@@ -1,9 +1,10 @@
 import React from 'react'
 import DisplayAnatomyFront from '../../components/AnatomyDisplay/DisplayAnatomyFront'
 import DisplayAnatomyBack from '../../components/AnatomyDisplay/DisplayAnatomyBack'
-import LearnMoreBtn from '../../components/Buttons/LearnMoreBtn'
 import ProgressiveOverloadPic from '../../images/progressive-overload-pic.jpg'
 import MaxRepsCard from '../../components/MaxRepsCard'
+
+import { NavLink } from 'react-router-dom'
 
 import BenchPressImg from '../../images/bench-press.jpg'
 import SquatImg from '../../images/squat.jpg'
@@ -40,7 +41,7 @@ export default function Overview() {
                         <p className='overview-section-p2'>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                         sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                         {/* Will add href prop later to Btn */}
-                        <LearnMoreBtn />
+                        <NavLink to={'anatomy'} className="learn-more-link learn-more-link-plans">Learn More</NavLink>
                     </div>
                     
                 </section>
@@ -52,7 +53,7 @@ export default function Overview() {
                     {maxRepsCards}
                 </div>
                 <div className='max-reps-learn-btn'>
-                    <LearnMoreBtn />
+                <NavLink to={'calculator'} className="learn-more-link learn-more-link-plans">Learn More</NavLink>
                 </div>
                 
             </div>
@@ -70,7 +71,7 @@ export default function Overview() {
                         <p className='overview-section-p2'>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                         sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                         {/* Will add href prop later to Btn */}
-                        <LearnMoreBtn />
+                        <NavLink to={'progression'} className="learn-more-link learn-more-link-plans">Learn More</NavLink>
                     </div>
                     
                 </section>

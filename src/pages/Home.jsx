@@ -2,7 +2,7 @@ import React from "react"
 import Container from 'react-bootstrap/Container';
 import HomeCard from "../components/HomeCard";
 import PlansCard from "../components/PlansCard";
-import LearnMoreBtn from "../components/Buttons/LearnMoreBtn";
+import { NavLink } from 'react-router-dom'
 // Images Imports
 import HomeLifting from '../images/home_lifting.jpg'
 import NutritionPic from '../images/nutrition_pic.jpg'
@@ -34,7 +34,8 @@ export default function Home() {
                             aliqua. Ut enim ad minim veniam, quis nostrud exercitation
                             ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                             {/* Will add href prop later to Btn */}
-                            <LearnMoreBtn />
+                            <NavLink to={'fitness'} className="learn-more-link">Learn More</NavLink>
+                            {/* <a className="learn-more-link" href="/fitness">Learn More</a> */}
                         </div>  
                         <img className="home-section-img home-section-fitness-img" src={HomeLifting} alt="" srcset="" />
                     </Container>
@@ -49,7 +50,7 @@ export default function Home() {
                             aliqua. Ut enim ad minim veniam, quis nostrud exercitation
                             ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                             {/* Will add href prop later to Btn */}
-                            <LearnMoreBtn />
+                            <NavLink to={'nutrition'} className="learn-more-link">Learn More</NavLink>
                         </div>  
                         <img className="home-section-img home-section-nutrition-img" src={NutritionPic} alt="" srcset="" />
                     </Container>
@@ -61,7 +62,9 @@ export default function Home() {
                         <div className="plans-cards-container">
                             <PlansCard imgUrl={FlexIconRed} title={'Fitness Plans'} text={loremText}/>
                             <PlansCard imgUrl={NutritionIconRed} title={'Nutrition Plans'} text={loremText}/>
+                            
                         </div>
+                        <NavLink to={'plans'} className="learn-more-link learn-more-link-plans">Learn More</NavLink>
                     </Container>
                 </section>
             </main>
