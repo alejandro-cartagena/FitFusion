@@ -32,6 +32,15 @@ p {
   padding: 0.25em 1em;
 }
 
+.learn-more-link {
+  transition: ease-in-out 0.2s;
+}
+
+.learn-more-link:hover {
+  background-color: #000000;
+  color: #e73539;
+}
+
 /****************/
 /*HEADER STYLES*/
 /****************/
@@ -59,6 +68,8 @@ a.logo-svg-container {
 }
 
 header {
+  /* top: 0;
+  position: sticky; */
   font-family: 'Saira Condensed', sans-serif;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -74,6 +85,11 @@ header {
   justify-content: space-between;
   align-items: center;
 }
+
+/* .header.scroll {
+  box-shadow: 1px 2px 10px 0px rgba(0,0,0,0.75);
+  transition: ease-in-out 0.2s;
+} */
 
 .nav-link:hover:not(.active) {
   color: #e73539;
@@ -103,6 +119,8 @@ nav {
   border-radius: 0.2rem;
 }
 
+
+
 .nav-links.open {
   display: flex;
 }
@@ -116,9 +134,14 @@ nav {
     display: flex;
   }
 
+  .burger-menu:hover span {
+    background-color: #e73539;
+  }
+
   .logo-container {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 100%;
   }
 
@@ -328,6 +351,11 @@ footer p {
   width: 75px;
 }
 
+.learn-more-link-plans {
+  margin: 0 auto;
+  margin-top: 2em
+}
+
 @media (max-width: 575px) {
   .home-section {
     padding-left: 1em;
@@ -449,7 +477,7 @@ footer p {
 /*MAX REPS CARD*/
 .max-reps-card-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(375px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(325px, 1fr));
   grid-gap: 2em;
 }
 

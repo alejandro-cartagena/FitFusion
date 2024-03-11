@@ -7,9 +7,10 @@ import Layout from './components/Layout';
 import FitnessLayout from './components/FitnessLayout';
 // Pages imports below
 import Home from './pages/Home';
-import Fitness from './pages/Fitness';
 import Plans from './pages/Plans';
 import Nutrition from './pages/Nutrition';
+
+import ScrollToTop from './components/ScrollToTop';
 
 //Fitness Pages imports
 import Overview from './pages/Fitness/Overview';
@@ -18,11 +19,12 @@ import Calculator from './pages/Fitness/Calculator';
 import Progression from './pages/Fitness/Progression';
 
 function App() {
-  const [count, setCount] = useState(0);
 
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <React.StrictMode>
+        
         <Routes>
 
           <Route path="/" element={<Layout />}>

@@ -7,6 +7,7 @@ import Dumbell from './icons/Dumbell'
 function Header() {
 
   const [menuOpen, setMenuOpen] = React.useState(false)
+  // const [scroll, setScroll] = React.useState(false)
 
   function toggleMenu() {
     setMenuOpen(prevVal => !prevVal)
@@ -18,9 +19,23 @@ function Header() {
     color: "#E73539"
   }
 
+  // React.useEffect(() => {
+  //   const handleScroll = () => {
+  //     setScroll(window.scrollY > 0);
+  //   };
+
+  //   window.addEventListener("scroll", handleScroll);
+
+  //   // Cleanup the event listener on component unmount
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, []);
+
+
 
   return (
-    <header>
+    <header className={scroll ? "header scroll" : ""}>
       <Container className="header-container">
 
         {/* Burger Menu */}
