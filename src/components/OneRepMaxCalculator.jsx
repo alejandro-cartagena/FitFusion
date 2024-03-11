@@ -13,7 +13,7 @@ export default function OneRepMaxCalculator() {
 
     const[isFormSubmitted, setIsFormSubmitted] = React.useState(false)
     const[oneRepMax, setOneRepMax] = React.useState(null)
-    const[warningMessage, setWarningMessage] = React.useState(false)
+    const[warningMessage, setWarningMessage] = React.useState(false) // For form validation
     
 
     function handleChange(event) {
@@ -33,7 +33,16 @@ export default function OneRepMaxCalculator() {
             setWarningMessage(false)
             const weight = Number(formData.weight);
             const reps = Number(formData.reps);
-            calculateOneRepMax(weight, reps);
+
+            if (formData.lift === 'bench') {
+                calculateOneRepMaxBench(weight, reps);
+            }
+            else if (formData.lift === 'squat') {
+                calculateOneRepMaxSquat(weight, reps)
+            }
+            else if (formData.lift === 'deadlift') {
+                calculateOneRepMaxDeadlift(weight, reps)
+            }
             setIsFormSubmitted(true)
         } else {
             setWarningMessage(true)
@@ -41,10 +50,24 @@ export default function OneRepMaxCalculator() {
 
     }
 
-    function calculateOneRepMax(weight, reps) {
+    // Lombardi Formula Bench
+    function calculateOneRepMaxBench(weight, reps) {
+
+        if (reps === 1) {
+            const max = weight
+            setOneRepMax(max)
+        }
+        else {
+            const max = weight * Math.pow(reps, 0.1)
+            setOneRepMax(parseFloat(max.toFixed(1)))
+        }
+        
+    }
+
+    // Epley Formula Squat
+    function calculateOneRepMaxSquat(weight, reps) {
     
         if (reps === 1) {
-            console.log("YOOOO")
             const max = weight
             setOneRepMax(max)
         }
@@ -55,6 +78,21 @@ export default function OneRepMaxCalculator() {
         
     }
 
+    // Brzycki Formula Deadlift
+    function calculateOneRepMaxDeadlift(weight, reps) {
+    
+        if (reps === 1) {
+            const max = weight
+            setOneRepMax(max)
+        }
+        else {
+            const max = weight / (1.0278 - 0.0278 * reps)
+            setOneRepMax(parseFloat(max.toFixed(1)))
+        }
+        
+    }
+
+    // Used to calculate percentages for the table
     function calculatePercentMax(percent, max) {
         const result = percent * max;
         return parseFloat(result.toFixed(1));
@@ -138,7 +176,7 @@ export default function OneRepMaxCalculator() {
 
                         <div className='select-wrap'>
                             <label className='select-label' htmlFor="unit">Lift</label>
-                            <select onChange={handleChange} defaultValue={'bench'} className='one-rep-max-select select-unit' name="lift" id="lift">
+                            <select onChange={handleChange} defaultValue={formData.lift} className='one-rep-max-select select-unit' name="lift" id="lift">
                                 <option value="bench">Bench</option>
                                 <option value="squat">Squat</option>
                                 <option value="deadlift">Deadlift</option>
@@ -158,7 +196,7 @@ export default function OneRepMaxCalculator() {
                     <div className='input-wrap'>
                         <label className='input-label' htmlFor="reps">Repetitions</label>
                         <div className='input-container'>
-                            <input value={formData.reps} onChange={handleChange} type="number" name="reps" id="reps" min={0} max={10}/>
+                            <input value={formData.reps} onChange={handleChange} type="number" name="reps" id="reps" min={1} max={10}/>
                             <p className='input-text'>reps</p>
                         </div>
                     </div>
