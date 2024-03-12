@@ -742,7 +742,24 @@ input[type=number]::-webkit-outer-spin-button {
   .select-wrap:first-child {
     margin-right: 1em;
   }
+
 }
+
+/******************************/
+/* PROGRESSION PAGE STYLES ***/
+/****************************/
+
+.progression-section-container {
+  /* margin: 0 auto; */
+  margin-bottom: 4em;
+  max-width: 1000px;
+}
+
+.progression-workout-programming-section {
+  /* border: solid red; */
+  margin: 2em 0;
+}
+
 
 
 /* SVG STYLES */
