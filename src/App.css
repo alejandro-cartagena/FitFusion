@@ -36,7 +36,8 @@ p {
   transition: ease-in-out 0.2s;
 }
 
-.learn-more-link:hover {
+.learn-more-link:hover,
+.btn:hover {
   background-color: #000000;
   color: #e73539;
 }
@@ -750,14 +751,42 @@ input[type=number]::-webkit-outer-spin-button {
 /****************************/
 
 .progression-section-container {
-  /* margin: 0 auto; */
   margin-bottom: 4em;
   max-width: 1000px;
 }
 
 .progression-workout-programming-section {
-  /* border: solid red; */
   margin: 2em 0;
+}
+
+/**************************/
+/* ANATOMY PAGE STYLES ***/
+/************************/
+
+.anatomy-page-container {
+  margin: 4em 0 8em 0;
+}
+
+.anatomy-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.anatomy-section-description-container {
+  max-width: 500px;
+  margin-bottom: 2em;
+}
+
+.anatomy-rotate-btn {
+  font-size: 1.125rem;
+  display: flex;
+  align-items: center;
+  margin-top: 2em;
+}
+
+.rotate-icon {
+  margin-left: 4px;;
 }
 
 
