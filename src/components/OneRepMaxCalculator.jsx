@@ -54,16 +54,15 @@ export default function OneRepMaxCalculator() {
     }
 
     // All formulas are commonly used to calculate 1rm.
-    // I used the Lombardi for Bench because it yields 
+    // I used the Brzycki for Bench because it yields 
     // a slightly lower result, since I find it is usually
     // harder to max out on the Bench.
 
-    // The Epley and Brzycki formula yield a slighlty higher
-    // result and are both very similar. I used the Epley 
-    // formula to calculate the Squat and the Brzycki 
-    // formula for the Deadlift.
+    // The Epley and Landler formula yield a slighlty higher
+    // result. I used the Epley formula to calculate the 
+    // Squat and the Landler formula for the Deadlift.
 
-    // Lombardi Formula Bench
+    // Brzycki Formula Bench
     function calculateOneRepMaxBench(weight, reps) {
 
         if (reps === 1) {
@@ -71,7 +70,7 @@ export default function OneRepMaxCalculator() {
             setOneRepMax(max)
         }
         else {
-            const max = weight * Math.pow(reps, 0.1)
+            const max = weight / (1.0278 - 0.0278 * reps)
             setOneRepMax(parseFloat(max.toFixed(1)))
         }
         
@@ -91,7 +90,7 @@ export default function OneRepMaxCalculator() {
         
     }
 
-    // Brzycki Formula Deadlift
+    // Lander Formula Deadlift
     function calculateOneRepMaxDeadlift(weight, reps) {
     
         if (reps === 1) {
@@ -99,7 +98,7 @@ export default function OneRepMaxCalculator() {
             setOneRepMax(max)
         }
         else {
-            const max = weight / (1.0278 - 0.0278 * reps)
+            const max = (100 * weight) / (101.3 - 2.67123 * reps)
             setOneRepMax(parseFloat(max.toFixed(1)))
         }
         
@@ -128,10 +127,20 @@ export default function OneRepMaxCalculator() {
         ]
 
         const percentTable = liftRepPercentages.map(item => {
-            return <tr>  
-                        <td>{item.percentWhole}% - &#40;{item.repMax}-rep max&#41;</td>
-                        <td>{calculatePercentMax(item.percentDecimal, max)}</td>
-                    </tr>
+            // Makes it so that that weight and reps that the user input are the same on the table 
+            if (item.repMax === Number(formData.reps)) {
+                return <tr>  
+                            <td>{item.percentWhole}% - &#40;{item.repMax}-rep max&#41;</td>
+                            <td>{formData.weight}</td>
+                        </tr>
+            }
+            else {
+                return <tr>  
+                            <td>{item.percentWhole}% - &#40;{item.repMax}-rep max&#41;</td>
+                            <td>{calculatePercentMax(item.percentDecimal, max)}</td>
+                        </tr>
+            }
+            
         })
 
         return <Table striped bordered hover>
