@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import AnatomyBack from '../../components/AnatomyBack';
 import AnatomyFront from '../../components/AnatomyFront';
+import { FaArrowRotateRight } from "react-icons/fa6";
 
 
 export default function Anatomy() {
@@ -11,11 +12,20 @@ export default function Anatomy() {
     };
 
     return (
-        <div className={`anatomy-container ${isFrontView ? 'front' : 'back'}`}>
-            <div className="anatomy-content">
-                {isFrontView ? <AnatomyFront /> : <AnatomyBack />}
+        <>
+            <div className='anatomy-page-container'>
+                <div className='anatomy-section-description-container'>
+                    <h2 className='section-heading'>Anatomy</h2>
+                    <p>Explore exercises by hovering over different muscle groups on the human body. Click on 
+                        the muscle to reveal a variety of exercises tailored specifically for that muscle group. </p>
+                </div>
+                <div className={`anatomy-container ${isFrontView ? 'front' : 'back'}`}>
+                    <div className="anatomy-content">
+                        {isFrontView ? <AnatomyFront /> : <AnatomyBack />}
+                    </div>
+                    <button className="btn anatomy-rotate-btn" onClick={rotate}>Rotate <FaArrowRotateRight className='rotate-icon'/></button>
+                </div>
             </div>
-            <button className="btn" onClick={rotate}>Rotate</button>
-        </div>
+        </>
     );
 }
