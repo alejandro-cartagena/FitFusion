@@ -67,17 +67,17 @@ function Header() {
           </NavLink>
           <NavLink
             className="nav-link"
-            to="/plans"
-            style={({ isActive }) => isActive ? activeStyles : null}
-          >
-            Plans
-          </NavLink>
-          <NavLink
-            className="nav-link"
             to="/nutrition"
             style={({ isActive }) => isActive ? activeStyles : null}
           >
             Nutrition
+          </NavLink>
+          <NavLink
+            className="nav-link"
+            to="/plans"
+            style={({ isActive }) => isActive ? activeStyles : null}
+          >
+            Plans
           </NavLink>
         </nav>
       </Container>
