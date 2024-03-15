@@ -548,6 +548,7 @@ footer p {
 
 .section-padding {
   padding: 4em 0;
+  margin-bottom: 4em;
 }
 
 .one-rep-max-heading {
@@ -787,6 +788,14 @@ input[type=number]::-webkit-outer-spin-button {
 
 .rotate-icon {
   margin-left: 4px;;
+}
+
+/*************************************/
+/* NUTRITION OVERVIEW PAGE STYLES ***/
+/***********************************/
+
+.overview-section-container:last-child {
+  margin-bottom: 4em;
 }
 
 
