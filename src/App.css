@@ -799,6 +799,61 @@ input[type=number]::-webkit-outer-spin-button {
   margin-bottom: 4em;
 }
 
+/****************************/
+/* BMI CALCULATOR STYLES ***/
+/**************************/
+
+.bmi-header-icon {
+  color: #e73539;
+  font-size: 35px;
+}
+
+.bmi-units {
+  margin-bottom: 1.5em
+}
+
+.bmi-unit-btn {
+  margin-right: 1em;
+  border: 1px solid #A9A9A9;
+  background-color: #D9D9D9;
+  color: #444343;
+  font-weight: 600;
+  border-radius: 4px;
+  padding: 0.5em 0.75em;
+  transition: ease-in 0.2s;
+}
+
+.bmi-unit-btn:hover {
+  color: #e73539;
+  background-color: #000000;
+  border: none;
+}
+
+.bmi-height-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5em;
+}
+
+.bmi-input-feet {
+  margin-bottom: 1.5em;
+}
+
+.bmi-input-text input {
+  width: 100%;
+}
+
+@media (min-width: 985px) {
+  .bmi-height-container {
+    flex-direction: row;
+  }
+
+  .bmi-input-feet {
+    margin-right: 1em;
+    margin-bottom: 0;
+  }
+
+}
 
 
 /* SVG STYLES */
