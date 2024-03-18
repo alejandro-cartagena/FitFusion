@@ -163,10 +163,12 @@ export default function OneRepMaxCalculator() {
     // Clears the form data and resets it to its default values
     function clearFormData() {
         setOneRepMax(null)
-        formData.unit = 'lb'
-        formData.lift = 'bench'
-        formData.weight = ''
-        formData.reps = ''
+        setFormData( {
+            unit: 'lb',
+            lift: 'bench',
+            weight: '',
+            reps: ''
+        })
     }
 
     // For when the user clicks the edit button
