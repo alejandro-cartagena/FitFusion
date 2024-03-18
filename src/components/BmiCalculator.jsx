@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { CiMedicalClipboard } from "react-icons/ci";
+import GaugeChart from 'react-gauge-chart'
 
 export default function BmiCalculator() {
 
@@ -158,6 +159,17 @@ export default function BmiCalculator() {
         setIsFormSubmitted(false)
     }
 
+    // GAUGE CHART
+
+    function calculateGaugePercentage(bmi) {
+        const maxValue = 40
+        const percent = bmi / maxValue
+        return percent.toFixed(1)
+    }
+
+    const formatTextValue = () => `${unit === 'us' ? bmiUs : bmiMetric}`;
+
+
     return (
         <>
             <div className='one-rep-max-card bmi-calculator-card'>
@@ -252,6 +264,15 @@ export default function BmiCalculator() {
                 ) : (
                     <div className='bmi-submitted-container'>
                         <h3 className='bmi-result-text'>BMI = {unit === 'us' ? bmiUs : bmiMetric} ({bmiStatus})</h3>
+                        <GaugeChart id="gauge-chart2" 
+                            nrOfLevels={5} 
+                            arcPadding={0}
+                            arcsLength={[0.4, 0.0625, 0.16, 0.1225, 0.255 ]}
+                            colors={['#e73539', '#ffe400', '#008137', '#ffe400', '#e73539']}
+                            percent={calculateGaugePercentage(unit === 'us' ? bmiUs : bmiMetric)}
+                            formatTextValue={formatTextValue}
+                            textColor={'#212529'}
+                        />
 
                         <div className='one-rep-max-submitted-btns'>
                             <button onClick={handleEditClick} className='btn one-rep-max-btn one-rep-max-edit-btn'>Edit</button>
