@@ -836,12 +836,37 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .bmi-input-feet {
+  width: 100%;
   margin-bottom: 1.5em;
+}
+
+.bmi-input-inches {
+  width: 100%;
 }
 
 .bmi-input-text input {
   width: 100%;
 }
+
+.bmi-input-cm {
+  margin-bottom: 1.5em;
+}
+
+.bmi-calculator-card {
+  height: fit-content;
+}
+
+.bmi-submitted-container {
+  padding: 3em 0;
+}
+
+
+.bmi-result-text {
+  text-align: center;
+  /* padding: 2em 0 */
+}
+
+
 
 @media (min-width: 985px) {
   .bmi-height-container {
