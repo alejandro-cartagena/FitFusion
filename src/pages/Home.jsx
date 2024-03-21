@@ -45,10 +45,9 @@ export default function Home() {
                     <Container className="section home-section">
                         <div className="section-text-container home-section-text-container">    
                             <h2 className="section-heading home-section-heading">Nutrition</h2>
-                            <p className="home-section-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                            sed do eiusmod tempor incididunt ut labore et dolore magna 
-                            aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                            ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            <p className="home-section-text">Dive into a world of health and vitality with our Nutrition page. Whether 
+                            you're curious about your BMI or striving for balanced macronutrients, we've got you covered. Calculate your 
+                            BMI to track your fitness journey or fine-tune your diet with our Macro Nutrient Calculator.</p>
                             {/* Will add href prop later to Btn */}
                             <NavLink to={'nutrition'} className="learn-more-link">Learn More</NavLink>
                         </div>  
@@ -60,8 +59,8 @@ export default function Home() {
                     <Container className="section home-section home-section-plans">
                         <h2 className="section-heading home-section-heading home-section-plans-heading">Plans</h2>
                         <div className="plans-cards-container">
-                            <PlansCard imgUrl={FlexIconRed} title={'Fitness Plans'} text={loremText}/>
-                            <PlansCard imgUrl={NutritionIconRed} title={'Nutrition Plans'} text={loremText}/>
+                            <PlansCard imgUrl={FlexIconRed} title={'Fitness Plans'} text={"Whether you're aiming to build muscle, increase power, or enhance your strength, our plans offer tailored workouts designed to help you achieve your fitness goals effectively."}/>
+                            <PlansCard imgUrl={NutritionIconRed} title={'Nutrition Plans'} text={"From personalized meal plans to expert guidance, discover the path to optimal health and vitality through wholesome nutrition tailored to your lifestyle and goals."}/>
                             
                         </div>
                         <NavLink to={'plans'} className="learn-more-link learn-more-link-plans">Learn More</NavLink>

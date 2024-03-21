@@ -30,7 +30,7 @@ export default function NutritionOverview() {
                     
                     <div className='section-text-container'>
                         
-                        <p className='overview-section-p'>Macronutrients, including carbohydrates, proteins, and fats, play essential 
+                        <p className='overview-section-p'>Macronutrients, including calories, carbohydrates, proteins, and fats, play essential 
                         roles in fueling your body and supporting various bodily functions. By calculating your macronutrient requirements 
                         based on factors like age, weight, activity level, and goals, you can customize your nutrition plan to meet
                          your individual needs.</p>

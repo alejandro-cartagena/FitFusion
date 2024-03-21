@@ -119,7 +119,7 @@ export default function Progression() {
 
             </div>
 
-            <div className='progression-section-container'>
+            <div className='progression-section-container progression-summary-container'>
                 <h2 className='section-heading'>Summary</h2>
                 <p>The Progression page is your comprehensive guide to unlocking the full potential of your fitness journey through progressive overload. 
                     It covers the core concept, key principles emphasizing resistance and variation, setting smart goals, and practical workout 
