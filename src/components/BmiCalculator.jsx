@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { CiMedicalClipboard } from "react-icons/ci";
 import GaugeChart from 'react-gauge-chart'
+import Table from 'react-bootstrap/Table';
 
 export default function BmiCalculator() {
 
@@ -73,7 +74,10 @@ export default function BmiCalculator() {
     }
 
     function calculateBmiStatus(bmi) {
-        if (bmi < 18.5) {
+        if (bmi < 16) {
+            setBmiStatus("Severely Underweight")
+        }
+        else if (bmi >= 16 && bmi <= 18.4) {
             setBmiStatus('Underweight')
         }
         else if (bmi >= 18.5 && bmi <= 24.9) {
@@ -272,6 +276,7 @@ export default function BmiCalculator() {
                             percent={calculateGaugePercentage(unit === 'us' ? bmiUs : bmiMetric)}
                             formatTextValue={formatTextValue}
                             textColor={'#212529'}
+                            animDelay={100}
                         />
 
                         <div className='one-rep-max-submitted-btns'>
@@ -285,6 +290,44 @@ export default function BmiCalculator() {
                 
 
             </div>
+
+            {isFormSubmitted ? (
+            <div className='bmi-table-container'>
+                <Table striped bordered hover className='bmi-table'>
+                        <thead>
+                        <tr>
+                            <th>BMI</th>
+                            <th>Classification</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td> &#60; 16</td>
+                                <td>Severely Underweight</td>
+                            </tr>
+                            <tr>
+                                <td>16 - 18.5</td>
+                                <td>Underweight</td>
+                            </tr>
+                            <tr>
+                                <td>18.5 - 25</td>
+                                <td>Normal</td>
+                            </tr>
+                            <tr>
+                                <td>25 - 30</td>
+                                <td>Overweight</td>
+                            </tr>
+                            <tr>
+                                <td>30 - 40</td>
+                                <td>Obese</td>
+                            </tr>
+                            
+                        </tbody>
+                    </Table>
+                </div>
+        ) : (
+            <></>
+        )}
         
         </>
     )

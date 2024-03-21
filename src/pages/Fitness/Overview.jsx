@@ -50,7 +50,7 @@ export default function Overview() {
                         
                         <p className='overview-section-p'>Explore the intricacies of the human body with our Anatomy tab. 
                         Interact with an image showcasing front and back muscle groups. Click on a specific muscle to 
-                        reveal detailed information and discover five effective lifts tailored to that muscle.</p>
+                        reveal detailed information and discover effective lifts tailored to that muscle.</p>
                         <p className='overview-section-p2'>Elevate your fitness understanding, sculpt your physique 
                         effectively, and embark on a transformative wellness experience</p>
                         {/* Will add href prop later to Btn */}

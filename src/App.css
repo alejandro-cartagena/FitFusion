@@ -277,7 +277,7 @@ footer p {
 
 /* HOME SECTIONS STYLES*/
 .section {
-  padding: 4em 0;
+  padding: 6em 0;
   display: flex;
   flex-direction: column;
 }
@@ -761,6 +761,10 @@ input[type=number]::-webkit-outer-spin-button {
   margin: 2em 0;
 }
 
+.progression-summary-container {
+  margin-bottom: 8em;
+}
+
 /**************************/
 /* ANATOMY PAGE STYLES ***/
 /************************/
@@ -865,6 +869,17 @@ input[type=number]::-webkit-outer-spin-button {
   text-align: center;
   margin-bottom: 1em;
   /* padding: 2em 0 */
+}
+
+.bmi-table-container {
+  max-width: 500px;
+  margin: 0 auto;
+  margin-top: 4em;
+}
+
+.bmi-table {
+  max-width: 500px;
+  /* margin: 0 auto */
 }
 
 
