@@ -883,7 +883,6 @@ input[type='number']::-webkit-outer-spin-button {
 .bmi-result-text {
   text-align: center;
   margin-bottom: 1em;
-  /* padding: 2em 0 */
 }
 
 .bmi-table-container {
@@ -894,7 +893,6 @@ input[type='number']::-webkit-outer-spin-button {
 
 .bmi-table {
   max-width: 500px;
-  /* margin: 0 auto */
 }
 
 @media (min-width: 985px) {
@@ -905,6 +903,30 @@ input[type='number']::-webkit-outer-spin-button {
   .bmi-input-feet {
     margin-right: 1em;
     margin-bottom: 0;
+  }
+
+  .bmi-calculator-card {
+    width: 70%;
+  }
+
+  .bmi-calculator-and-table-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3em;
+  }
+
+  .bmi-calculator-card-submitted,
+  .bmi-table-container-submitted {
+    margin: 0
+  }
+
+  .bmi-calculator-card-submitted {
+    margin-right: 4em;
+  }
+
+  .bmi-table-container-submitted {
+    width: 25%
   }
 }
 
