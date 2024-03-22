@@ -784,6 +784,29 @@ input[type='number']::-webkit-outer-spin-button {
   margin-top: 2em;
 }
 
+.anatomy-content-full {
+  display: none;
+}
+
+@media (min-width: 985px) {
+  .anatomy-rotate-btn {
+    display: none;
+  }
+
+  .anatomy-content {
+    display: none;
+  }
+
+  .anatomy-content-full {
+    display: flex;
+  
+  }
+
+  .anatomy-content-full-front {
+    margin-right: 4em;
+  }
+}
+
 .rotate-icon {
   margin-left: 4px;
 }
