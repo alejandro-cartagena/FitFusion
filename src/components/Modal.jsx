@@ -41,17 +41,26 @@ export default function BasicModal(props) {
   }
 
   const [open, setOpen] = React.useState(false);
+  const [selectedBtn, setSelectedBtn] = React.useState(null);
   const [currentVid, setCurrentVid] = React.useState({
     video: '',
     description: '',
   });
   const handleOpen = () => setOpen(true);
   const handleClose = () => {
+    setSelectedBtn(null);
     setOpen(false);
     setCurrentVid({
       video: '',
       description: '',
     });
+  };
+  const handleButtonClick = (el) => {
+    setCurrentVid({
+      description: el.description,
+      video: el.video,
+    });
+    setSelectedBtn(el.id); // Set the selected button ID
   };
 
   React.useEffect(() => {
@@ -74,27 +83,24 @@ export default function BasicModal(props) {
             {open ? props.modalLifts[0].muscle : ''}
           </h2>
           <div className="modalFlex">
-            <ul
+            <div
               className={
                 currentVid.video ? 'innerModal' : 'innerModal centerAuto'
               }
             >
               {props.modalLifts.map((el) => (
-                <li
-                  className="liftItem btn"
+                <button
+                  className={`liftItem btn ${
+                    selectedBtn === el.id ? 'selected' : ''
+                  }`}
                   key={el.id}
-                  onClick={() =>
-                    setCurrentVid({
-                      description: el.description,
-                      video: el.video,
-                    })
-                  }
+                  onClick={() => handleButtonClick(el)}
                 >
                   {' '}
                   {el.name}
-                </li>
+                </button>
               ))}
-            </ul>
+            </div>
 
             <div className="vidFlex">
               <p className="descriptionText"> {currentVid.description}</p>
