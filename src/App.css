@@ -919,7 +919,7 @@ input[type='number']::-webkit-outer-spin-button {
 /* Modal styles */
 .modalFlex {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 .innerModal {
   display: flex;
