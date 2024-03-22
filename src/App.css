@@ -120,8 +120,6 @@ nav {
   border-radius: 0.2rem;
 }
 
-
-
 .nav-links.open {
   display: flex;
 }
@@ -355,7 +353,7 @@ footer p {
 
 .learn-more-link-plans {
   margin: 0 auto;
-  margin-top: 2em
+  margin-top: 2em;
 }
 
 @media (max-width: 575px) {
@@ -542,7 +540,6 @@ footer p {
   }
 }
 
-
 /*************************************/
 /* FITNESS CALCULATOR PAGE STYLES ***/
 /***********************************/
@@ -561,11 +558,10 @@ footer p {
   letter-spacing: 0.5px;
 }
 
-
 /*ONE REP MAX CALCULATOR STYLES*/
 
 .one-rep-max-card {
-  background-color: #D9D9D9;
+  background-color: #d9d9d9;
   border-radius: 8px;
   max-width: 550px;
   margin: 0 auto;
@@ -586,7 +582,7 @@ footer p {
 }
 
 .one-rep-max-header-title {
-  color: #FFFFFF;
+  color: #ffffff;
   font-family: 'Saira Condensed', sans-serif;
   text-transform: uppercase;
   font-weight: 600;
@@ -602,7 +598,7 @@ footer p {
   display: flex;
   align-items: center;
   position: relative;
-  border: solid 1px #A9A9A9;
+  border: solid 1px #a9a9a9;
   border-radius: 4px;
   margin-bottom: 1em;
 }
@@ -617,7 +613,7 @@ select {
   border: none;
   border-radius: 4px;
   padding: 0.5em;
-  background-color: #D9D9D9;
+  background-color: #d9d9d9;
   width: 100%;
   text-align: right;
   border-right: 0.5em solid transparent;
@@ -626,7 +622,7 @@ select {
 .input-wrap {
   display: flex;
   align-items: center;
-  border: solid 1px #A9A9A9;
+  border: solid 1px #a9a9a9;
   border-radius: 4px;
   position: relative;
 }
@@ -646,11 +642,11 @@ select {
 input {
   width: 100%;
   padding: 0.5em;
-  background-color: #D9D9D9;
+  background-color: #d9d9d9;
   border: none;
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
-  border-right: 1px solid #A9A9A9;
+  border-right: 1px solid #a9a9a9;
 }
 
 .input-text {
@@ -658,12 +654,12 @@ input {
   padding: 0 0.5em;
 }
 
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    margin: 0; 
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
 }
 
 .input-container input {
@@ -683,10 +679,9 @@ input[type=number]::-webkit-outer-spin-button {
 .one-rep-max-btn:hover {
   background-color: #000000;
   color: #e73539;
-
 }
 
-.select-inputs-container{
+.select-inputs-container {
   display: flex;
   flex-direction: column;
 }
@@ -700,7 +695,7 @@ input[type=number]::-webkit-outer-spin-button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 2em
+  margin-bottom: 2em;
 }
 
 .one-rep-max-submitted-lift-text {
@@ -731,7 +726,6 @@ input[type=number]::-webkit-outer-spin-button {
   margin-top: 2em;
 }
 
-
 @media (min-width: 985px) {
   .select-inputs-container {
     flex-direction: row;
@@ -745,7 +739,6 @@ input[type=number]::-webkit-outer-spin-button {
   .select-wrap:first-child {
     margin-right: 1em;
   }
-
 }
 
 /******************************/
@@ -792,7 +785,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .rotate-icon {
-  margin-left: 4px;;
+  margin-left: 4px;
 }
 
 /*************************************/
@@ -813,13 +806,13 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .bmi-units {
-  margin-bottom: 1.5em
+  margin-bottom: 1.5em;
 }
 
 .bmi-unit-btn {
   margin-right: 1em;
-  border: 1px solid #A9A9A9;
-  background-color: #D9D9D9;
+  border: 1px solid #a9a9a9;
+  background-color: #d9d9d9;
   color: #444343;
   font-weight: 600;
   border-radius: 4px;
@@ -864,7 +857,6 @@ input[type=number]::-webkit-outer-spin-button {
   padding: 3em 0;
 }
 
-
 .bmi-result-text {
   text-align: center;
   margin-bottom: 1em;
@@ -882,8 +874,6 @@ input[type=number]::-webkit-outer-spin-button {
   /* margin: 0 auto */
 }
 
-
-
 @media (min-width: 985px) {
   .bmi-height-container {
     flex-direction: row;
@@ -893,9 +883,7 @@ input[type=number]::-webkit-outer-spin-button {
     margin-right: 1em;
     margin-bottom: 0;
   }
-
 }
-
 
 /* SVG STYLES */
 .flexAna {
@@ -929,24 +917,31 @@ input[type=number]::-webkit-outer-spin-button {
 } */
 
 /* Modal styles */
-.modalFlex{
+.modalFlex {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+}
+.innerModal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.liftItem{
-  list-style: none;
+.liftItem {
+  /* list-style: none; */
   margin: 1.5rem 0;
-  margin-right: 2rem;
+  /* margin-right: 2rem; */
 }
-.liftItem:hover{
+.centerAuto {
+  margin: auto;
+}
+.liftItem:hover {
   cursor: pointer;
-  color: red;
 }
-.muscleTitle{
+.muscleTitle {
   text-align: center;
 }
-.descriptionText{
+.descriptionText {
   max-width: 600px; /* Adjust the value as needed */
   word-wrap: break-word; /* or overflow-wrap: break-word; */
 }
