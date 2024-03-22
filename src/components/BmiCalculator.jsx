@@ -176,7 +176,8 @@ export default function BmiCalculator() {
 
     return (
         <>
-            <div className='one-rep-max-card bmi-calculator-card'>
+        <div className={isFormSubmitted ? 'bmi-calculator-and-table-container' : ''}>
+            <div className={isFormSubmitted ? 'one-rep-max-card bmi-calculator-card bmi-calculator-card-submitted' : 'one-rep-max-card bmi-calculator-card'}>
                 <div className='one-rep-max-header'>
                     <h4 className='one-rep-max-header-title'>Bmi</h4>
                     <CiMedicalClipboard className='bmi-header-icon'/>
@@ -292,7 +293,7 @@ export default function BmiCalculator() {
             </div>
 
             {isFormSubmitted ? (
-            <div className='bmi-table-container'>
+            <div className={isFormSubmitted ? 'bmi-table-container bmi-table-container-submitted' : 'bmi-table-container'}>
                 <Table striped bordered hover className='bmi-table'>
                         <thead>
                         <tr>
@@ -328,7 +329,7 @@ export default function BmiCalculator() {
         ) : (
             <></>
         )}
-        
+        </div>
         </>
     )
 }
