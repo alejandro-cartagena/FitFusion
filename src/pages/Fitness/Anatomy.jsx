@@ -23,6 +23,14 @@ export default function Anatomy() {
                     <div className="anatomy-content">
                         {isFrontView ? <AnatomyFront /> : <AnatomyBack />}
                     </div>
+                    <div className='anatomy-content-full'>
+                        <div className='anatomy-content-full-front'>
+                            <AnatomyFront />
+                        </div>
+                        <div>
+                            <AnatomyBack />
+                        </div>
+                    </div>
                     <button className="btn anatomy-rotate-btn" onClick={rotate}>Rotate <FaArrowRotateRight className='rotate-icon'/></button>
                 </div>
             </div>
