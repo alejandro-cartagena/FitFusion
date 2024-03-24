@@ -19,6 +19,7 @@ import Overview from './pages/Fitness/Overview';
 import Anatomy from './pages/Fitness/Anatomy';
 import Calculator from './pages/Fitness/Calculator';
 import Progression from './pages/Fitness/Progression';
+import GymFinderPage from './pages/Fitness/GymFinderPage';
 
 // Nutrition Pages imports
 import NutritionOverview from './pages/Nutrition/NutritionOverview';
@@ -39,6 +40,7 @@ function App() {
               <Route path="anatomy" element={<Anatomy />} />
               <Route path="calculator" element={<Calculator />} />
               <Route path="progression" element={<Progression />} />
+              <Route path="gymNearMe" element={<GymFinderPage />} />
             </Route>
             <Route path="nutrition" element={<NutritionLayout />}>
               <Route index element={<NutritionOverview />} />

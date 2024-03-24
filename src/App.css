@@ -997,3 +997,14 @@ input[type='number']::-webkit-outer-spin-button {
   background-color: #000000;
   color: white;
 }
+
+/* Map Styles */
+.map-container {
+  height: 400px; /* Default height */
+}
+
+@media (max-width: 768px) {
+  .map-container {
+    height: 300px; /* Adjust height for smaller screens */
+  }
+}
