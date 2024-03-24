@@ -799,7 +799,6 @@ input[type='number']::-webkit-outer-spin-button {
 
   .anatomy-content-full {
     display: flex;
-  
   }
 
   .anatomy-content-full-front {
@@ -918,7 +917,7 @@ input[type='number']::-webkit-outer-spin-button {
 
   .bmi-calculator-card-submitted,
   .bmi-table-container-submitted {
-    margin: 0
+    margin: 0;
   }
 
   .bmi-calculator-card-submitted {
@@ -926,7 +925,7 @@ input[type='number']::-webkit-outer-spin-button {
   }
 
   .bmi-table-container-submitted {
-    width: 25%
+    width: 25%;
   }
 }
 
@@ -989,4 +988,23 @@ input[type='number']::-webkit-outer-spin-button {
 .descriptionText {
   max-width: 600px; /* Adjust the value as needed */
   word-wrap: break-word; /* or overflow-wrap: break-word; */
+}
+.selected {
+  background-color: #000000;
+  color: white;
+}
+.selected:hover {
+  background-color: #000000;
+  color: white;
+}
+
+/* Map Styles */
+.map-container {
+  height: 400px; /* Default height */
+}
+
+@media (max-width: 768px) {
+  .map-container {
+    height: 300px; /* Adjust height for smaller screens */
+  }
 }

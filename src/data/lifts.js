@@ -677,7 +677,7 @@ const lifts = [
     name: 'Leg Curls',
     description:
       'Leg curls target the hamstrings and are performed by curling the legs towards the buttocks while lying face down on a leg curl machine.',
-    video: 'https://www.youtube.com/watch?v=q1cKTmaeQWo',
+    video: 'https://www.youtube.com/watch?v=swZQC689o9U',
     muscle: 'Ham Strings',
   },
   {
