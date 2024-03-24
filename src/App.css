@@ -997,6 +997,9 @@ input[type='number']::-webkit-outer-spin-button {
   background-color: #000000;
   color: white;
 }
+.mg-top {
+  margin-top: 1rem;
+}
 
 /* Map Styles */
 .map-container {
