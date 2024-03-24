@@ -64,11 +64,14 @@ const GymFinderTool = () => {
     <div>
       <input
         type="text"
+        className="zipInput"
         placeholder="Enter Zip Code"
         value={zipCode}
         onChange={handleInputChange}
       />
-      <button onClick={handleSearch}>Search</button>
+      <button onClick={handleSearch} className="btn searchBtn">
+        Search
+      </button>
       {loading && <p>Loading...</p>}
       {!loading && center && (
         <div
