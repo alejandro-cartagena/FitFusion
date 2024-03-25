@@ -929,6 +929,37 @@ input[type='number']::-webkit-outer-spin-button {
   }
 }
 
+
+
+/******************************/
+/* MACRO CALCULATOR STYLES ***/
+/****************************/
+
+.select-wrap-macro {
+  width: 100%;
+}
+
+.input-wrap-macro,
+.select-wrap-activity,
+.select-wrap-gender-metric,
+.input-wrap-macro-weight-metric {
+  margin-bottom: 1.5em;
+}
+
+.select-label-macro-activity {
+  position: static;
+  padding: 0 0.5em;
+}
+
+/* @media (max-width: 400px) {
+
+  .select-label-macro-activity {
+    position: static;
+    padding: 0 0.5em;
+  }
+
+} */
+
 /* SVG STYLES */
 .flexAna {
   display: flex;
