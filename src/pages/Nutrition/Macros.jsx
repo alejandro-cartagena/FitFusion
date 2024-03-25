@@ -6,22 +6,26 @@ export default function Macros() {
         <>
             <section className='section-padding'>
                 <h2 className='section-heading one-rep-max-heading'>Macro calculator</h2>
-                <p className='calculator-info-text'>Body Mass Index (BMI) is a measure used to assess an individual's body weight 
-                relative to their height. It provides a simple numerical representation of a person's body composition, indicating 
-                whether their weight falls within a healthy range for their height. The resulting number categorizes individuals into 
-                different BMI ranges, such as underweight, normal weight, overweight, and obese, providing insight into their 
-                overall health status. </p>
-                <p className='calculator-info-text'>While BMI is a widely used tool for assessing an individual's body composition and 
-                potential health risks associated with weight, it does have limitations that users should be aware of. One notable limitation 
-                is that BMI does not differentiate between muscle mass and fat mass. Therefore, individuals with high muscle mass, such as 
-                athletes or bodybuilders, may register as overweight or even obese according to BMI standards, despite being in excellent 
-                physical condition. Additionally, BMI does not take into account factors such as bone density, age, gender, or distribution 
-                of fat, which can vary widely among individuals and influence overall health outcomes. As a result, while BMI can provide a 
-                general indication of weight status, it should be interpreted cautiously and in conjunction with other assessments for a 
-                comprehensive understanding of an individual's health profile.</p>
-                <p className='calculator-info-text'>Our BMI calculator offers a convenient way to determine your BMI and assess your current 
-                body weight status. Simply input your height and weight into the calculator, and it will instantly provide your BMI score 
-                along with the corresponding BMI category.</p>
+                <p className='calculator-info-text'>Macronutrients, often referred to as macros, are the essential 
+                nutrients that provide energy and support various bodily functions. The three primary macros are 
+                carbohydrates, proteins, and fats. Carbohydrates are the body's main source of energy, proteins are 
+                crucial for building and repairing tissues, and fats play a vital role in hormone production and 
+                nutrient absorption. Each macro provides a certain number of calories per gram: carbohydrates 
+                and proteins provide 4 calories per gram, while fats provide 9 calories per gram. </p>
+                <p className='calculator-info-text'>Tracking macros is essential for achieving specific health and fitness 
+                goals. By monitoring the intake of carbohydrates, proteins, and fats, individuals can ensure they are meeting 
+                their nutritional needs and maintaining a balanced diet. For those looking to lose weight, tracking macros can 
+                help create a calorie deficit by adjusting the proportion of macros consumed. Conversely, individuals aiming 
+                to build muscle or improve athletic performance may need to increase their protein intake while adjusting their 
+                carbohydrate and fat intake accordingly.</p>
+                <p className='calculator-info-text'>While macro calculators provide valuable insights into daily caloric and 
+                macronutrient needs, they have limitations that users should be aware of. These calculators typically provide 
+                generalized recommendations based on factors such as age, gender, weight, height, activity level, and goals. However, 
+                individual factors such as metabolism, body composition, and dietary preferences may influence actual nutritional 
+                requirements. Additionally, macro calculators may not account for specific health conditions or dietary restrictions,
+                 leading to potentially inaccurate recommendations. Therefore, while macro calculators can be a helpful tool for 
+                 setting dietary targets, it's essential to use them as a starting point and adjust based on personal experience 
+                 and feedback from your body.</p>
 
                 <MacroCalculator />
             </section>

@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import Table from 'react-bootstrap/Table';
+import MacroIcon from '../images/calculate_macros_icon_red.png'
 
 
 export default function MacroCalculator() {
@@ -78,30 +80,49 @@ export default function MacroCalculator() {
         const activity = formDataUs.activity
         const goal = formDataUs.goal
 
-        const height = feetInchesToInches(feet, inches)
-
-        const bmr = calculateUsBMR(gender, weight, height, age)
-        const tdee = Number(calculateTDEE(activity, bmr))
-
-        const caloricGoal = calculateCaloricGoal(goal, tdee)
-        const macroNutrients = calculateMacrosUs(goal, caloricGoal)
-
-        setIsFormSubmitted(true)
-
+        if (age != '' && feet != '' && inches != '' && weight != '') {
+            setWarningMessage(false)
+            const height = feetInchesToInches(feet, inches)
+            const bmr = calculateUsBMR(gender, weight, height, age)
+            const tdee = Number(calculateTDEE(activity, bmr))
+    
+            const caloricGoal = calculateCaloricGoal(goal, tdee)
+            // calculateMacros(goal, caloricGoal)
+            calculateMacrosUs(activity, weight, caloricGoal)
+    
+            setIsFormSubmitted(true)
+        }
+        else {
+            setWarningMessage(true)
+        }
     }
 
 
     function handleMetricSubmit(event) {
         event.preventDefault()
+        const gender = formDataMetric.gender
+        const age = Number(formDataMetric.age)
+        const height = Number(formDataMetric.height)
+        const weight = Number(formDataMetric.weight)
+        const activity = formDataMetric.activity
+        const goal = formDataMetric.goal
+
+        if (age != '' && height != '' && weight != '') {
+            setWarningMessage(false)
+            const bmr = calculateMetricBMR(gender, weight, height, age)
+            const tdee = Number(calculateTDEE(activity, bmr))
+    
+            const caloricGoal = calculateCaloricGoal(goal, tdee)
+            // calculateMacros(goal, caloricGoal)
+            calculateMacrosMetric(activity, weight, caloricGoal)
+    
+            setIsFormSubmitted(true)
+        }
+        else {
+            setWarningMessage(true)
+        }
     }
 
-    function clearFormDataMetric() {
-        setBmiMetric(null)
-        setFormDataMetric({
-            height: '',
-            weight: ''
-        });
-    }
     
     ////////////////
     // EQUATIONS //
@@ -109,18 +130,6 @@ export default function MacroCalculator() {
 
     function feetInchesToInches(feet, inches) {
         return (feet * 12) + inches
-    }
-
-    function feetInchesToCm(feet, inches) {
-        const feetToCm = feet * 30.48
-        const inchToCm = inches * 2.54
-        const totalCentimeters = feetToCm + inchToCm
-        return totalCentimeters.toFixed(2)
-    }
-
-    function poundsToKilograms(pounds) {
-        const kg = pounds / 2.205
-        return kg.toFixed(2)
     }
 
     // BMR is the number of calories you need to maintain basic
@@ -188,7 +197,8 @@ export default function MacroCalculator() {
         }
     }
 
-    function calculateMacrosUs(goal, calories) {
+    // Macros
+    function calculateMacrosCalories(goal, calories) {
         let carbsRatio;
         let proteinRatio;
         let fatRatio;
@@ -215,9 +225,131 @@ export default function MacroCalculator() {
             calories: calories,
             protein: proteinIntake.toFixed(0),
             carbs: carbsIntake.toFixed(0),
-            fat: fatIntake.toFixed(0),
+            fats: fatIntake.toFixed(0),
         });
 
+    }
+
+    // Calculates Macros Based off Weight (U.S Units)
+    function calculateMacrosUs(activityLevel, weight, calories) {
+        let proteinPerPound;
+        let fatPerPound;
+    
+        // Determine intake based on activity
+        if (activityLevel === 'sedentary') {
+            proteinPerPound = 0.6;
+            fatPerPound = 0.3;
+        } else if (activityLevel === 'lightly active') {
+            proteinPerPound = 0.7;
+            fatPerPound = 0.35;
+        } else if (activityLevel === 'moderately active') {
+            proteinPerPound = 0.8;
+            fatPerPound = 0.4;
+        } else if (activityLevel === 'active') {
+            proteinPerPound = 0.9;
+            fatPerPound = 0.45;
+        } else if (activityLevel === 'extremely active') {
+            proteinPerPound = 1.0;
+            fatPerPound = 0.5;
+        }
+
+        const recommendedProteinIntake = proteinPerPound * weight;
+        const recommendedFatIntake = fatPerPound * weight;
+
+        const proteinCalories = recommendedProteinIntake * 4
+        const fatCalories = recommendedFatIntake * 9
+        const proteinAndFatCalories = proteinCalories + fatCalories
+
+        const recommendedCarbsIntake = (calories - proteinAndFatCalories) / 4
+
+        setMacros({
+            calories: calories,
+            protein: recommendedProteinIntake.toFixed(0),
+            carbs: recommendedCarbsIntake.toFixed(0),
+            fats: recommendedFatIntake.toFixed(0),
+        });
+    
+    }
+
+    // Calculates Macros Based off Weight (Metric Units)
+    function calculateMacrosMetric(activityLevel, weight, calories) {
+        let proteinPerKg;
+        let fatPerKg;
+    
+        // Determine intake based on activity
+        if (activityLevel === 'sedentary') {
+            proteinPerKg = 1.32; // grams of protein per kg
+            fatPerKg = 0.66; // grams of fat per kg
+        } else if (activityLevel === 'lightly active') {
+            proteinPerKg = 1.54;
+            fatPerKg = 0.77;
+        } else if (activityLevel === 'moderately active') {
+            proteinPerKg = 1.76;
+            fatPerKg = 0.88;
+        } else if (activityLevel === 'active') {
+            proteinPerKg = 1.98;
+            fatPerKg = 0.99;
+        } else if (activityLevel === 'extremely active') {
+            proteinPerKg = 2.2;
+            fatPerKg = 1.1;
+        }
+    
+        const recommendedProteinIntake = proteinPerKg * weight;
+        const recommendedFatIntake = fatPerKg * weight;
+    
+        const proteinCalories = recommendedProteinIntake * 4; // 4 calories per gram of protein
+        const fatCalories = recommendedFatIntake * 9; // 9 calories per gram of fat
+        const proteinAndFatCalories = proteinCalories + fatCalories;
+    
+        const recommendedCarbsIntake = (calories - proteinAndFatCalories) / 4; // 4 calories per gram of carbs
+
+    
+        setMacros({
+            calories: calories,
+            protein: recommendedProteinIntake.toFixed(0),
+            carbs: recommendedCarbsIntake.toFixed(0),
+            fats: recommendedFatIntake.toFixed(0),
+        });
+    
+    }
+
+    ////////////////////////////////////////////
+    // FUNCTIONS TO CLEAR AND RESET FORM DATA //
+    ///////////////////////////////////////////
+    function clearFormDataUs() {
+        setMacros({
+            calories: '',
+            carbs: '',
+            protein: '',
+            fats: ''
+        })
+        setFormDataUs({
+            age: '',
+            gender: 'male',
+            feet: '',
+            inches: '',
+            weight: '',
+            activity: 'moderately active',
+            goal: 'maintain'
+        });
+
+    }
+
+    function clearFormDataMetric() {
+        setMacros({
+            calories: '',
+            carbs: '',
+            protein: '',
+            fats: ''
+        })
+        setFormDataMetric({
+            age: '',
+            gender: 'male',
+            height: '',
+            weight: '',
+            activity: 'moderately active',
+            goal: 'maintain'
+        });
     }
 
 
@@ -235,16 +367,13 @@ export default function MacroCalculator() {
         setIsFormSubmitted(false)
     }
 
-    console.log("MACROS: ", macros)
-
-
 
     return (
         <>
-            <div className={isFormSubmitted ? 'one-rep-max-card bmi-calculator-card bmi-calculator-card-submitted' : 'one-rep-max-card bmi-calculator-card'}>
+            <div className='one-rep-max-card bmi-calculator-card'>
                 <div className='one-rep-max-header macro-calculator-header'>
-                    <h4 className='one-rep-max-header-title'>Macro</h4>
-                    {/* <img className='one-rep-max-header-icon' src={NutritionIconRed} alt="" srcset="" /> */}
+                    <h4 className='one-rep-max-header-title'>Macros</h4>
+                    <img className='one-rep-max-header-icon' src={MacroIcon} alt="" srcset="" /> 
                 </div>
 
                 {!isFormSubmitted ? (
@@ -412,11 +541,39 @@ export default function MacroCalculator() {
                         </form>
                     )
                 ) : (
-                    <div>
-                        <h3>Calories: {macros.calories}</h3>
-                        <h3>Carbs: {macros.carbs} grams/day</h3>
-                        <h3>Protein: {macros.protein} grams/day</h3>
-                        <h3>Fat: {macros.fat} grams/day</h3>
+                    <div className='macro-form-submitted-container'>
+
+                        <Table striped bordered hover className='bmi-table'>
+                            <thead>
+                            <tr>
+                                <th>Nutrients</th>
+                                <th>Daily Needs</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Calories</td>
+                                    <td>{macros.calories} calories/day</td>
+                                </tr>
+                                <tr>
+                                    <td>Carbs</td>
+                                    <td>{macros.carbs} grams/day</td>
+                                </tr>
+                                <tr>
+                                    <td>Protein</td>
+                                    <td>{macros.protein} grams/day</td>
+                                </tr>
+                                <tr>
+                                    <td>Fat</td>
+                                    <td>{macros.fats} grams/day</td>
+                                </tr>      
+                            </tbody>
+                        </Table>
+
+                        <div className='one-rep-max-submitted-btns'>
+                            <button onClick={handleEditClick} className='btn one-rep-max-btn one-rep-max-edit-btn'>Edit</button>
+                            <button onClick={unit === 'us' ? handleResetClickUs : handleResetClickMetric} className='btn one-rep-max-btn one-rep-max-reset-btn'>Reset</button>
+                        </div>
                     </div>
                 )}
             </div>

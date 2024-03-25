@@ -951,6 +951,11 @@ input[type='number']::-webkit-outer-spin-button {
   padding: 0 0.5em;
 }
 
+.macro-form-submitted-container {
+  padding: 3em 2em;
+}
+
+
 /* @media (max-width: 400px) {
 
   .select-label-macro-activity {
