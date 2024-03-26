@@ -317,18 +317,18 @@ export default function MacroCalculator() {
 
         // Adjust intake based on goal
         if (goal === 'lose slightly') {
-            proteinPerKg -= 0.1;
+            proteinPerKg -= 0.22;
             fatPerKg -= 0.05;
         } else if (goal === 'lose') {
-            proteinPerKg -= 0.2;
+            proteinPerKg -= 0.44;
             fatPerKg -= 0.1;
         } else if (goal === 'maintain') {
             // Do nothing
         } else if (goal === 'gain slightly') {
-            proteinPerKg += 0.1;
+            proteinPerKg += 0.22;
             fatPerKg += 0.05;
         } else if (goal === 'gain') {
-            proteinPerKg += 0.2;
+            proteinPerKg += 0.44;
             fatPerKg += 0.1;
         }
     
@@ -580,6 +580,22 @@ export default function MacroCalculator() {
                     )
                 ) : (
                     <div className='macro-form-submitted-container'>
+
+                        <h4>Results</h4>
+                        {unit === 'us' ? (
+                            <p>The results shown below are the suggested amounts of Calories and
+                            macro nutrients needed daily to {formDataUs.goal === 'lose slightly' ? 'lose 0.5 lb per week.' :
+                            formDataUs.goal === 'lose' ? 'lose 1.0 lb per week.' : formDataUs.goal === 'maintain' ? 'maintain your weight.' :
+                            formDataUs.goal === 'gain slightly' ? 'gain 0.5 lb per week.' : 'gain 1.0 lb per week.'}
+                            </p>
+                        ) : (
+                            <p>The results shown below are the suggested amounts of Calories and
+                            macro nutrients needed to {formDataMetric.goal === 'lose slightly' ? 'lose 0.25 kg per week.' :
+                            formDataMetric.goal === 'lose' ? 'lose 0.5 kg per week.' : formDataMetric.goal === 'maintain' ? 'maintain your weight.' :
+                            formDataMetric.goal === 'gain slightly' ? 'gain 0.25 kg per week.' : 'gain 0.5 kg per week.'}
+                            </p>
+                        )}
+                        
 
                         <Table striped bordered hover className='bmi-table'>
                             <thead>
