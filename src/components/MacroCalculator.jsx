@@ -88,7 +88,7 @@ export default function MacroCalculator() {
     
             const caloricGoal = calculateCaloricGoal(goal, tdee)
             // calculateMacros(goal, caloricGoal)
-            calculateMacrosUs(activity, weight, caloricGoal)
+            calculateMacrosUs(activity, goal, weight, caloricGoal)
     
             setIsFormSubmitted(true)
         }
@@ -114,7 +114,7 @@ export default function MacroCalculator() {
     
             const caloricGoal = calculateCaloricGoal(goal, tdee)
             // calculateMacros(goal, caloricGoal)
-            calculateMacrosMetric(activity, weight, caloricGoal)
+            calculateMacrosMetric(activity, goal, weight, caloricGoal)
     
             setIsFormSubmitted(true)
         }
@@ -231,26 +231,47 @@ export default function MacroCalculator() {
     }
 
     // Calculates Macros Based off Weight (U.S Units)
-    function calculateMacrosUs(activityLevel, weight, calories) {
+    function calculateMacrosUs(activityLevel, goal, weight, calories) {
         let proteinPerPound;
         let fatPerPound;
     
         // Determine intake based on activity
         if (activityLevel === 'sedentary') {
-            proteinPerPound = 0.6;
+            proteinPerPound = 0.7;
             fatPerPound = 0.3;
         } else if (activityLevel === 'lightly active') {
-            proteinPerPound = 0.7;
+            proteinPerPound = 0.8;
             fatPerPound = 0.35;
         } else if (activityLevel === 'moderately active') {
-            proteinPerPound = 0.8;
+            proteinPerPound = 0.9;
             fatPerPound = 0.4;
         } else if (activityLevel === 'active') {
-            proteinPerPound = 0.9;
+            proteinPerPound = 1.0;
             fatPerPound = 0.45;
         } else if (activityLevel === 'extremely active') {
-            proteinPerPound = 1.0;
+            proteinPerPound = 1.1;
             fatPerPound = 0.5;
+        }
+
+        // Adjust intake based on goal
+        if (goal === 'lose slightly') {
+            proteinPerPound -= 0.1;
+            // carbsPerPound -= 0.1;
+            fatPerPound -= 0.05;
+        } else if (goal === 'lose') {
+            proteinPerPound -= 0.2;
+            // carbsPerPound -= 0.2;
+            fatPerPound -= 0.1;
+        } else if (goal === 'maintain') {
+            // Do nothing
+        } else if (goal === 'gain slightly') {
+            proteinPerPound += 0.1;
+            // carbsPerPound += 0.1;
+            fatPerPound += 0.05;
+        } else if (goal === 'gain') {
+            proteinPerPound += 0.2;
+            // carbsPerPound += 0.2;
+            fatPerPound += 0.1;
         }
 
         const recommendedProteinIntake = proteinPerPound * weight;
@@ -272,26 +293,43 @@ export default function MacroCalculator() {
     }
 
     // Calculates Macros Based off Weight (Metric Units)
-    function calculateMacrosMetric(activityLevel, weight, calories) {
+    function calculateMacrosMetric(activityLevel, goal, weight, calories) {
         let proteinPerKg;
         let fatPerKg;
     
         // Determine intake based on activity
         if (activityLevel === 'sedentary') {
-            proteinPerKg = 1.32; // grams of protein per kg
+            proteinPerKg = 1.54; // grams of protein per kg
             fatPerKg = 0.66; // grams of fat per kg
         } else if (activityLevel === 'lightly active') {
-            proteinPerKg = 1.54;
+            proteinPerKg = 1.76;
             fatPerKg = 0.77;
         } else if (activityLevel === 'moderately active') {
-            proteinPerKg = 1.76;
+            proteinPerKg = 1.98;
             fatPerKg = 0.88;
         } else if (activityLevel === 'active') {
-            proteinPerKg = 1.98;
+            proteinPerKg = 2.2;
             fatPerKg = 0.99;
         } else if (activityLevel === 'extremely active') {
-            proteinPerKg = 2.2;
+            proteinPerKg = 2.42;
             fatPerKg = 1.1;
+        }
+
+        // Adjust intake based on goal
+        if (goal === 'lose slightly') {
+            proteinPerKg -= 0.1;
+            fatPerKg -= 0.05;
+        } else if (goal === 'lose') {
+            proteinPerKg -= 0.2;
+            fatPerKg -= 0.1;
+        } else if (goal === 'maintain') {
+            // Do nothing
+        } else if (goal === 'gain slightly') {
+            proteinPerKg += 0.1;
+            fatPerKg += 0.05;
+        } else if (goal === 'gain') {
+            proteinPerKg += 0.2;
+            fatPerKg += 0.1;
         }
     
         const recommendedProteinIntake = proteinPerKg * weight;
