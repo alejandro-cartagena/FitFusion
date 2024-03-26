@@ -427,7 +427,7 @@ export default function MacroCalculator() {
                             <div className='input-wrap bmi-input-text input-wrap-macro'>
                                 <label className='input-label' htmlFor="age">Age</label>
                                 <div className='input-container'>
-                                    <input min={0} max={500} onChange={handleUsChange} type="number" name="age" id="age" value={formDataUs.age}/>
+                                    <input min={18} max={80} onChange={handleUsChange} type="number" name="age" id="age" value={formDataUs.age}/>
                                     <p className='input-text'>years</p>
                                 </div>
                             </div>
@@ -446,7 +446,7 @@ export default function MacroCalculator() {
                             <div className='bmi-height-container'>
                                 <div className='input-wrap bmi-input-feet'>
                                     <div className='input-container'>
-                                        <input  min={1} max={7} onChange={handleUsChange} type="number" name="feet" id="feet" value={formDataUs.feet}/>
+                                        <input  min={3} max={8} onChange={handleUsChange} type="number" name="feet" id="feet" value={formDataUs.feet}/>
                                         <p className='input-text'>feet</p>
                                     </div>
                                 </div>
@@ -512,7 +512,7 @@ export default function MacroCalculator() {
                             <div className='input-wrap bmi-input-text input-wrap-macro'>
                                 <label className='input-label' htmlFor="age">Age</label>
                                 <div className='input-container'>
-                                    <input min={0} max={500} onChange={handleMetricChange} type="number" name="age" id="age" value={formDataMetric.age}/>
+                                    <input min={18} max={80} onChange={handleMetricChange} type="number" name="age" id="age" value={formDataMetric.age}/>
                                     <p className='input-text'>years</p>
                                 </div>
                             </div>
@@ -531,7 +531,7 @@ export default function MacroCalculator() {
                             <div className='input-wrap bmi-input-cm'>
                                 <label className='input-label' htmlFor="height">Height</label>
                                 <div className='input-container'>
-                                    <input min={1} max={275} onChange={handleMetricChange} type="number" name="height" id="height" value={formDataMetric.height}/>
+                                    <input min={92} max={250} onChange={handleMetricChange} type="number" name="height" id="height" value={formDataMetric.height}/>
                                     <p className='input-text'>cm</p>
                                 </div>
                             </div>
