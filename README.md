@@ -18,7 +18,7 @@ you need to achieve your fitness goals effectively.</p>
 </ul>
 
 <h4>Clone the Repository</h4>
-<pre><code>git clone https://github.com/your-username/fitfusion.git
+<pre><code>git clone https://github.com/alejandro-cartagena/FitFusion.git
 </code></pre>
 
 <h4>Navigate to the Project Directory</h4>
