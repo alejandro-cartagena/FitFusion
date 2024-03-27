@@ -1,58 +1,24 @@
 import React, { useState } from 'react';
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
-import 'leaflet/dist/leaflet.css';
 
 const GymFinderTool = () => {
   const [zipCode, setZipCode] = useState('');
-  const [center, setCenter] = useState(null);
   const [gyms, setGyms] = useState([]);
   const [loading, setLoading] = useState(false);
 
-  const handleSearch = () => {
+  const handleSearch = async () => {
     setLoading(true);
-    if (zipCode) {
-      fetch(
-        `https://nominatim.openstreetmap.org/search?format=json&countrycodes=us&postalcode=${zipCode}`
-      )
-        .then((response) => response.json())
-        .then((data) => {
-          if (data.length > 0) {
-            const { lat, lon } = data[0];
-            setCenter([parseFloat(lat), parseFloat(lon)]);
-            fetchGyms(lat, lon);
-          }
-        })
-        .catch((error) => console.error('Error fetching geocode:', error))
-        .finally(() => setLoading(false));
+    try {
+      const response = await fetch(
+        `http://localhost:3000/gyms?zipCode=${zipCode}`
+      );
+      const data = await response.json();
+      console.log('Gym data:', data); // Log the received data
+      setGyms(data.results);
+    } catch (error) {
+      console.error('Error fetching gyms:', error);
+    } finally {
+      setLoading(false);
     }
-  };
-
-  const fetchGyms = (lat, lon) => {
-    // Dummy data for demonstration, replace with actual API call to fetch gym data
-    const dummyGyms = [
-      {
-        id: 1,
-        name: 'Gym A',
-        lat: parseFloat(lat) + 0.01,
-        lon: parseFloat(lon) + 0.01,
-        phone: '123-456-7890',
-      },
-      {
-        id: 2,
-        name: 'Gym B',
-        lat: parseFloat(lat) + 0.02,
-        lon: parseFloat(lon) - 0.02,
-        phone: '234-567-8901',
-      },
-      {
-        id: 3,
-        name: 'Gym C',
-        lat: parseFloat(lat) - 0.01,
-        lon: parseFloat(lon) + 0.01,
-        phone: '345-678-9012',
-      },
-    ];
-    setGyms(dummyGyms);
   };
 
   const handleInputChange = (event) => {
@@ -73,34 +39,16 @@ const GymFinderTool = () => {
         Search
       </button>
       {loading && <p>Loading...</p>}
-      {!loading && center && (
-        <div
-          className="map-container"
-          style={{ height: '350px', width: '100%' }}
-        >
-          <MapContainer
-            center={center}
-            zoom={13}
-            style={{ height: '100%', width: '100%' }}
-          >
-            <TileLayer
-              attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-            />
+      {!loading && (
+        <div>
+          <h2>Gyms Near You</h2>
+          <ul>
             {gyms.map((gym) => (
-              <Marker
-                key={gym.id}
-                position={[parseFloat(gym.lat), parseFloat(gym.lon)]}
-              >
-                <Popup>
-                  <div>
-                    <h3>{gym.name}</h3>
-                    <p>Phone: {gym.phone}</p>
-                  </div>
-                </Popup>
-              </Marker>
+              <li key={gym.place_id}>
+                {gym.name} - Phone: {gym.formatted_phone_number}
+              </li>
             ))}
-          </MapContainer>
+          </ul>
         </div>
       )}
     </div>
