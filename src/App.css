@@ -956,6 +956,30 @@ input[type='number']::-webkit-outer-spin-button {
 }
 
 
+/******************************/
+/* FITNESS PLANS STYLES    ***/
+/****************************/
+
+.fitness-plans-card {
+  opacity: 0.8;
+  transition: 0.2s;
+}
+
+.fitness-plans-card:hover {
+  opacity: 1.0;
+  scale: 1.05;
+  cursor: pointer;
+}
+
+.fitness-plans-nav-link {
+  text-decoration: none;
+}
+
+.fitness-plans-card-title {
+  color: #000000;
+}
+
+
 /* @media (max-width: 400px) {
 
   .select-label-macro-activity {
