@@ -1,6 +1,5 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import MaxRepsCard from '../../components/MaxRepsCard'
 
 // Image Imports
 import StrengthImg from '../../images/strength_pic.jpg'
@@ -8,31 +7,6 @@ import HypertrophyImg from '../../images/hypertrophy_pic.jpg'
 import CalisthenicsImg from '../../images/calisthenics_pic.jpg'
 
 export default function PlansOverview() {
-
-    const maxRepsCardData = [
-        {
-            imgUrl: StrengthImg, 
-            liftType: 'Strength', 
-            liftText: 'A foundational compound exercise that targets the chest, shoulders, and triceps. Ready to push your limits? Use our One Rep Max Calculator to determine your maximum lifting potential and tailor your training for optimal gains.'
-        },
-        
-        {
-            imgUrl: HypertrophyImg, 
-            liftType: 'Hypertrophy', 
-            liftText: 'A fundamental compound movement essential for developing lower body strength and stability. Looking to optimize your training? Navigate to our One Rep Max Calculator, a powerful tool to gauge your maximum strength potential.'
-        },
-
-        {
-            imgUrl: CalisthenicsImg, 
-            liftType: 'Calisthenics', 
-            liftText: 'A pinnacle strength-building exercise that engages multiple muscle groups, promoting overall strength and power. Seeking to measure your strength limits? Navigate to our One Rep Max Calculator, a precise tool to determine your maximum lifting capacity.'
-        }
-    ]
-
-    const maxRepsCards = maxRepsCardData.map((data, index) => {
-        return <MaxRepsCard key={index} imgUrl={data.imgUrl} liftType={data.liftType} liftText={data.liftText} className="fitness-plans-card"/>
-    })
-
 
     return (
         <>
