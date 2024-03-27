@@ -32,8 +32,8 @@ export default function Overview() {
         }
     ]
 
-    const maxRepsCards = maxRepsCardData.map((data) => {
-        return <MaxRepsCard imgUrl={data.imgUrl} liftType={data.liftType} liftText={data.liftText}/>
+    const maxRepsCards = maxRepsCardData.map((data, index) => {
+        return <MaxRepsCard key={index} imgUrl={data.imgUrl} liftType={data.liftType} liftText={data.liftText}/>
     })
 
 

@@ -6,25 +6,32 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Layout from './components/Layout';
 import FitnessLayout from './components/FitnessLayout';
 import NutritionLayout from './components/NutritionLayout';
+import PlansLayout from './components/PlansLayout';
 
 // Pages imports below
 import Home from './pages/Home';
 import Plans from './pages/Plans';
-import Nutrition from './pages/Nutrition';
 
 import ScrollToTop from './components/ScrollToTop';
 
-//Fitness Pages imports
+//Fitness Page imports
 import Overview from './pages/Fitness/Overview';
 import Anatomy from './pages/Fitness/Anatomy';
 import Calculator from './pages/Fitness/Calculator';
 import Progression from './pages/Fitness/Progression';
 import GymFinderPage from './pages/Fitness/GymFinderPage';
 
-// Nutrition Pages imports
+// Nutrition Page imports
 import NutritionOverview from './pages/Nutrition/NutritionOverview';
 import Bmi from './pages/Nutrition/Bmi';
 import Macros from './pages/Nutrition/Macros';
+
+// Plans Page imports
+import PlansOverview from './pages/Plans/PlansOverview';
+import Strength from './pages/Plans/Strength';
+import Hypertrophy from './pages/Plans/Hypertrophy';
+import Calisthenics from './pages/Plans/Calisthenics';
+
 
 function App() {
   return (
@@ -34,7 +41,6 @@ function App() {
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
-            <Route path="plans" element={<Plans />} />
             <Route path="fitness" element={<FitnessLayout />}>
               <Route index element={<Overview />} />
               <Route path="anatomy" element={<Anatomy />} />
@@ -46,6 +52,12 @@ function App() {
               <Route index element={<NutritionOverview />} />
               <Route path="bmi" element={<Bmi />} />
               <Route path="macros" element={<Macros />} />
+            </Route>
+            <Route path="plans" element={<PlansLayout />}>
+              <Route index element={<PlansOverview />} />
+              <Route path="strength" element={<Strength />} />
+              <Route path="hypertrophy" element={<Hypertrophy />} />
+              <Route path="calisthenics" element={<Calisthenics />} />
             </Route>
           </Route>
         </Routes>
