@@ -961,7 +961,7 @@ input[type='number']::-webkit-outer-spin-button {
 /****************************/
 
 .fitness-plans-card {
-  opacity: 0.8;
+  opacity: 0.9;
   transition: 0.2s;
 }
 
