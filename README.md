@@ -6,7 +6,7 @@ you need to achieve your fitness goals effectively.
 
 ## Motivation: Why FitFusion was created 
 
-FitFusion was born out of a passion for making fitness accessible and enjoyable for everyone. We understand that starting a fitness journey can be daunting, with so much information scattered across the internet and numerous options to choose from. FitFusion aims to simplify this process by bringing together all the essential resources and tools in one convenient platform. Our goal is to empower individuals of all fitness levels to take control of their health and well-being by providing them with the knowledge, guidance, and support they need to succeed.
+FitFusion was born out of a passion for making fitness accessible and enjoyable for everyone. We understand that starting a fitness journey can be daunting, with so much information scattered across the internet and numerous options to choose from. FitFusion aims to simplify this process by bringing together all the essential resources and tools in one convenient platform.
 
 Whether you're looking to build muscle, lose weight, improve your overall health, or simply learn more about fitness, FitFusion is here to help you every step of the way.
 
