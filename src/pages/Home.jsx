@@ -60,8 +60,6 @@ export default function Home() {
                         <h2 className="section-heading home-section-heading home-section-plans-heading">Plans</h2>
                         <div className="plans-cards-container">
                             <PlansCard imgUrl={FlexIconRed} title={'Fitness Plans'} text={"Whether you're aiming to build muscle, increase power, or enhance your strength, our plans offer tailored workouts designed to help you achieve your fitness goals effectively."}/>
-                            <PlansCard imgUrl={NutritionIconRed} title={'Nutrition Plans'} text={"From personalized meal plans to expert guidance, discover the path to optimal health and vitality through wholesome nutrition tailored to your lifestyle and goals."}/>
-                            
                         </div>
                         <NavLink to={'plans'} className="learn-more-link learn-more-link-plans">Learn More</NavLink>
                     </Container>
