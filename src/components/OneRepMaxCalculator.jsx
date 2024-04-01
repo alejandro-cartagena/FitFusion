@@ -53,17 +53,10 @@ export default function OneRepMaxCalculator() {
 
     }
 
-    // All formulas are commonly used to calculate 1rm.
-    // I used the Brzycki for Bench because it yields 
-    // a slightly lower result, since I find it is usually
-    // harder to max out on the Bench.
+    // The two formulas are commonly used to calculate 1rm.
 
-    // The Epley and Landler formula yield a slighlty higher
-    // result. I used the Epley formula to calculate the 
-    // Squat and the Landler formula for the Deadlift.
-
-    // Brzycki Formula Bench
-    function calculateOneRepMaxBench(weight, reps) {
+    // Brzycki Formula Squat
+    function calculateOneRepMaxSquat(weight, reps) {
 
         if (reps === 1) {
             const max = weight
@@ -76,8 +69,8 @@ export default function OneRepMaxCalculator() {
         
     }
 
-    // Epley Formula Squat
-    function calculateOneRepMaxSquat(weight, reps) {
+    // Epley Formula Bench
+    function calculateOneRepMaxBench(weight, reps) {
     
         if (reps === 1) {
             const max = weight
@@ -90,7 +83,7 @@ export default function OneRepMaxCalculator() {
         
     }
 
-    // Lander Formula Deadlift
+    // Brzycki Formula Deadlift
     function calculateOneRepMaxDeadlift(weight, reps) {
     
         if (reps === 1) {
@@ -98,7 +91,7 @@ export default function OneRepMaxCalculator() {
             setOneRepMax(max)
         }
         else {
-            const max = (100 * weight) / (101.3 - 2.67123 * reps)
+            const max = weight / (1.0278 - 0.0278 * reps)
             setOneRepMax(parseFloat(max.toFixed(1)))
         }
         

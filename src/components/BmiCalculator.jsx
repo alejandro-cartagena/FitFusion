@@ -87,7 +87,7 @@ export default function BmiCalculator() {
             setBmiStatus('Overweight')
         }
         else {
-            setBmiStatus('Fat as FUCK')
+            setBmiStatus('Obese')
         }
     }
 
