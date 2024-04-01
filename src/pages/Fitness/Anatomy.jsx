@@ -16,8 +16,8 @@ export default function Anatomy() {
             <div className='anatomy-page-container'>
                 <div className='anatomy-section-description-container'>
                     <h2 className='section-heading'>Anatomy</h2>
-                    <p>Discover targeted exercises by hovering over various muscle groups and clicking on the 
-                        desired muscle to reveal a variety of exercises tailored specifically for that muscle group. </p>
+                    <p>Discover targeted exercises by clicking on the desired muscle to reveal a variety 
+                        of exercises tailored specifically for that muscle group. </p>
                 </div>
                 <div className={`anatomy-container ${isFrontView ? 'front' : 'back'}`}>
                     <div className="anatomy-content">

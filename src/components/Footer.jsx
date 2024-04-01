@@ -18,8 +18,8 @@ export default function Footer() {
                     </div>
                 </div>
                 <div className="footer-items-container">
-                    <p> <MdOutlineEmail /> info@fitfusion.com</p>
-                    <p>© 2024 FitFusion</p>
+                    <p className="footer-p"> <MdOutlineEmail /> info@fitfusion.com</p>
+                    <p className="footer-p">© 2024 FitFusion</p>
                 </div>
             </Container>
         </footer>

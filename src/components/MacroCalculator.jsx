@@ -408,7 +408,7 @@ export default function MacroCalculator() {
 
     return (
         <>
-            <div className='one-rep-max-card bmi-calculator-card'>
+            <div className='one-rep-max-card bmi-calculator-card macro-calculator-card'>
                 <div className='one-rep-max-header macro-calculator-header'>
                     <h4 className='one-rep-max-header-title'>Macros</h4>
                     <img className='one-rep-max-header-icon' src={MacroIcon} alt="" srcset="" /> 

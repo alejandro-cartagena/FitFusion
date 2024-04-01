@@ -17,6 +17,10 @@ p {
   flex-direction: column;
 }
 
+ul li b {
+  font-weight: 500;
+}
+
 /********************/
 /*REUSABLE BUTTONS */
 /******************/
@@ -187,6 +191,10 @@ footer h3 {
   max-width: 215px;
   min-width: 175px;
   text-transform: uppercase;
+}
+
+.footer-p {
+  color: #FFFFFF;
 }
 
 .social-media-icon {
@@ -566,6 +574,7 @@ footer p {
   max-width: 550px;
   margin: 0 auto;
   margin-top: 3em;
+  margin-bottom: 4em;
 }
 
 .one-rep-max-header {
@@ -873,6 +882,11 @@ input[type='number']::-webkit-outer-spin-button {
 
 .bmi-calculator-card {
   height: fit-content;
+  margin-bottom: 4em;
+}
+
+.bmi-calculator-and-table-container {
+  margin-bottom: 4em;
 }
 
 .bmi-submitted-container {
@@ -934,6 +948,10 @@ input[type='number']::-webkit-outer-spin-button {
 /******************************/
 /* MACRO CALCULATOR STYLES ***/
 /****************************/
+
+.macro-calculator-card {
+  margin-bottom: 4em
+}
 
 .select-wrap-macro {
   width: 100%;
