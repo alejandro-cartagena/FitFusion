@@ -40,12 +40,6 @@ export default function FitnessLayout() {
         >
           Progression
         </NavLink>
-        <NavLink
-          to={'gymNearMe'}
-          style={({ isActive }) => (isActive ? activeStyles : null)}
-        >
-          Gym Finder
-        </NavLink>
       </nav>
       <Outlet />
     </Container>

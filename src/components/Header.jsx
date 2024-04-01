@@ -19,21 +19,6 @@ function Header() {
     color: "#E73539"
   }
 
-  // React.useEffect(() => {
-  //   const handleScroll = () => {
-  //     setScroll(window.scrollY > 0);
-  //   };
-
-  //   window.addEventListener("scroll", handleScroll);
-
-  //   // Cleanup the event listener on component unmount
-  //   return () => {
-  //     window.removeEventListener("scroll", handleScroll);
-  //   };
-  // }, []);
-
-
-
   return (
     <header className={scroll ? "header scroll" : ""}>
       <Container className="header-container">
@@ -78,6 +63,13 @@ function Header() {
             style={({ isActive }) => isActive ? activeStyles : null}
           >
             Plans
+          </NavLink>
+          <NavLink
+            className="nav-link"
+            to={'/gymNearMe'}
+            style={({ isActive }) => (isActive ? activeStyles : null)}
+          >
+            Gym Finder
           </NavLink>
         </nav>
       </Container>
