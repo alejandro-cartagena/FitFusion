@@ -128,7 +128,7 @@ nav {
   display: flex;
 }
 
-@media (max-width: 650px) {
+@media (max-width: 775px) {
   .nav-link:not(:last-child) {
     margin-right: 0;
   }
@@ -1020,6 +1020,14 @@ input[type='number']::-webkit-outer-spin-button {
 
 .fitness-plans-ending-section {
   margin-bottom: 8em
+}
+
+/*****************************/
+/* GYM FINDER PAGE STYLES ***/
+/***************************/
+
+.gym-finder-heading {
+  margin-top: 2em;
 }
 
 
