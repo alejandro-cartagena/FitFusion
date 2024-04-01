@@ -41,10 +41,10 @@ export default function OneRepMaxCalculator() {
                 calculateOneRepMaxBench(weight, reps);
             }
             else if (formData.lift === 'squat') {
-                calculateOneRepMaxSquat(weight, reps)
+                calculateOneRepMaxSquatDeadlift(weight, reps)
             }
             else if (formData.lift === 'deadlift') {
-                calculateOneRepMaxDeadlift(weight, reps)
+                calculateOneRepMaxSquatDeadlift(weight, reps)
             }
             setIsFormSubmitted(true)
         } else {
@@ -55,8 +55,8 @@ export default function OneRepMaxCalculator() {
 
     // The two formulas are commonly used to calculate 1rm.
 
-    // Brzycki Formula Squat
-    function calculateOneRepMaxSquat(weight, reps) {
+    // Brzycki Formula Bench
+    function calculateOneRepMaxBench(weight, reps) {
 
         if (reps === 1) {
             const max = weight
@@ -69,8 +69,8 @@ export default function OneRepMaxCalculator() {
         
     }
 
-    // Epley Formula Bench
-    function calculateOneRepMaxBench(weight, reps) {
+    // Epley Formula Squat and Deadlift
+    function calculateOneRepMaxSquatDeadlift(weight, reps) {
     
         if (reps === 1) {
             const max = weight
@@ -78,20 +78,6 @@ export default function OneRepMaxCalculator() {
         }
         else {
             const max = weight * (1 + 0.0333 * reps)
-            setOneRepMax(parseFloat(max.toFixed(1)))
-        }
-        
-    }
-
-    // Brzycki Formula Deadlift
-    function calculateOneRepMaxDeadlift(weight, reps) {
-    
-        if (reps === 1) {
-            const max = weight
-            setOneRepMax(max)
-        }
-        else {
-            const max = weight / (1.0278 - 0.0278 * reps)
             setOneRepMax(parseFloat(max.toFixed(1)))
         }
         
@@ -107,17 +93,34 @@ export default function OneRepMaxCalculator() {
     function createPercentTable() {
 
         const max = oneRepMax
-        const liftRepPercentages = [
-            {repMax: 2, percentWhole: 97, percentDecimal: 0.97},
-            {repMax: 3, percentWhole: 94, percentDecimal: 0.94},
-            {repMax: 4, percentWhole: 92, percentDecimal: 0.92},
-            {repMax: 5, percentWhole: 89, percentDecimal: 0.89},
-            {repMax: 6, percentWhole: 86, percentDecimal: 0.86},
-            {repMax: 7, percentWhole: 83, percentDecimal: 0.83},
-            {repMax: 8, percentWhole: 81, percentDecimal: 0.81},
-            {repMax: 9, percentWhole: 78, percentDecimal: 0.78},
-            {repMax: 10, percentWhole: 75, percentDecimal: 0.75},
-        ]
+        let liftRepPercentages = []
+        if (formData.lift === 'squat' || formData.lift === 'deadlift') {
+            liftRepPercentages = [
+                {repMax: 2, percentWhole: 94, percentDecimal: 0.94},
+                {repMax: 3, percentWhole: 91, percentDecimal: 0.91},
+                {repMax: 4, percentWhole: 88, percentDecimal: 0.88},
+                {repMax: 5, percentWhole: 86, percentDecimal: 0.86},
+                {repMax: 6, percentWhole: 83, percentDecimal: 0.83},
+                {repMax: 7, percentWhole: 81, percentDecimal: 0.81},
+                {repMax: 8, percentWhole: 79, percentDecimal: 0.79},
+                {repMax: 9, percentWhole: 77, percentDecimal: 0.77},
+                {repMax: 10, percentWhole: 75, percentDecimal: 0.75},
+            ]
+        }
+        else if (formData.lift === 'bench') {
+            liftRepPercentages = [
+                {repMax: 2, percentWhole: 97, percentDecimal: 0.97},
+                {repMax: 3, percentWhole: 94, percentDecimal: 0.94},
+                {repMax: 4, percentWhole: 92, percentDecimal: 0.92},
+                {repMax: 5, percentWhole: 89, percentDecimal: 0.89},
+                {repMax: 6, percentWhole: 86, percentDecimal: 0.86},
+                {repMax: 7, percentWhole: 83, percentDecimal: 0.83},
+                {repMax: 8, percentWhole: 81, percentDecimal: 0.81},
+                {repMax: 9, percentWhole: 78, percentDecimal: 0.78},
+                {repMax: 10, percentWhole: 75, percentDecimal: 0.75},
+            ]
+        }
+        
 
         const percentTable = liftRepPercentages.map(item => {
             // Makes it so that that weight and reps that the user input are the same on the table 
