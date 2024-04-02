@@ -1,7 +1,5 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import YouTube from 'react-youtube';
 
@@ -22,12 +20,17 @@ const style = {
   width: '80%',
   height: '75%',
   maxWidth: '960px',
+  maxHeight: '575px',
   bgcolor: 'background.paper',
   boxShadow: 24,
   borderRadius: '4px',
   outline: 0,
   p: '50px',
-  overflowY: "auto"
+  overflowY: "auto",
+  '@media (max-width: 500px)': {
+    paddingLeft: '20px',
+    paddingRight: '20px'
+  }
 };
 
 export default function BasicModal(props) {
@@ -82,14 +85,17 @@ export default function BasicModal(props) {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-          <h2 className="muscleTitle section-heading">
+          {!selectedBtn ? (
+            <h2 className="muscleTitle section-heading">
+              {open ? props.modalLifts[0].muscle : ''}
+            </h2>
+          ): ''}
+          <h2 className="section-heading muscleTitleMobile">
             {open ? props.modalLifts[0].muscle : ''}
           </h2>
+          <div onClick={handleClose} className='close-modal-btn'>X</div>
           <div className="modalFlex">
             <div
-              // className={
-              //   currentVid.video ? 'innerModal' : 'innerModal centerAuto'
-              // }
               className={
                 currentVid.video 
                   ? (selectedBtn ? 'innerModal innerModalSelected' : 'innerModal centerAuto')
@@ -108,8 +114,13 @@ export default function BasicModal(props) {
                 </button>
               ))}
             </div>
-
             <div className="vidFlex">
+            {selectedBtn ? (
+              <h2 className="muscleTitle section-heading">
+                {open ? props.modalLifts[0].muscle : ''}
+              </h2>
+            ): ''}
+            
               <p className="descriptionText"> {currentVid.description}</p>
               {currentVid.video && (
                 <YouTube
