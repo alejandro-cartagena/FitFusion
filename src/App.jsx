@@ -57,7 +57,8 @@ function App() {
               <Route path="hypertrophy" element={<Hypertrophy />} />
               <Route path="calisthenics" element={<Calisthenics />} />
             </Route>
-            <Route path="gymNearMe" element={<GymFinderPage />} />
+            {/* Route in progress... */}
+            {/* <Route path="gymNearMe" element={<GymFinderPage />} /> */}
           </Route>
         </Routes>
       </React.StrictMode>

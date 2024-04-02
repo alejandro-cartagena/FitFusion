@@ -2,12 +2,12 @@ import React from "react";
 import { Link, NavLink } from "react-router-dom"
 import Container from 'react-bootstrap/Container';
 import Dumbell from './icons/Dumbell'
+import { GrClose } from "react-icons/gr";
 
 
 function Header() {
 
   const [menuOpen, setMenuOpen] = React.useState(false)
-  // const [scroll, setScroll] = React.useState(false)
 
   function toggleMenu() {
     setMenuOpen(prevVal => !prevVal)
@@ -29,11 +29,15 @@ function Header() {
               <Dumbell color='#E73539' />
               <span className="logo">FitFusion</span>
             </Link>
-            <div className="burger-menu" onClick={toggleMenu}>
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+            {!menuOpen ? (
+              <div className="burger-menu" onClick={toggleMenu}>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+              </div>
+            ) : (
+              <GrClose onClick={toggleMenu} className="header-close-btn" />
+            )}
         </div>
         <nav className={menuOpen ? "nav-links open" : "nav-links"}>
           <NavLink
@@ -64,13 +68,15 @@ function Header() {
           >
             Plans
           </NavLink>
-          <NavLink
+
+          {/* Route in progress... */}
+          {/* <NavLink
             className="nav-link"
             to={'/gymNearMe'}
             style={({ isActive }) => (isActive ? activeStyles : null)}
           >
             Gym Finder
-          </NavLink>
+          </NavLink> */}
         </nav>
       </Container>
     </header>
