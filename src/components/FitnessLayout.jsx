@@ -31,7 +31,7 @@ export default function FitnessLayout() {
           to={'calculator'}
           style={({ isActive }) => (isActive ? activeStyles : null)}
         >
-          Calculator
+          1RM
         </NavLink>
 
         <NavLink

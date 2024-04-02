@@ -18,13 +18,13 @@ export default function Calculator() {
 
             <h4>Equations Used</h4>
             <p className='calculator-info-text'></p>
-            <p>The utilization of multiple formulas, such as the Epley and Brzycki formulas in the one-rep max (1RM) 
+            <p>The utilization of multiple formulas, such as the Brzycki and Epley formulas in the one-rep max (1RM) 
                 calculator provides users with a comprehensive perspective on their maximal strength potential. These two
-                formulas are the most commonly used to calculate 1RM. The Epley formula was used to calculate the Bench Press
-                while the Brzycki was used to calculate the Squat and Deadlift.</p>
+                formulas are the most commonly used to calculate 1RM. The Brzycki formula was used to calculate the Bench Press
+                while the Epley formula was used to calculate the Squat and Deadlift.</p>
             <ul>
-                <li><b>Epley Formula: </b>max = weight * (1 + 0.0333 * reps)</li>
                 <li><b>Brzycki Formula: </b>max = weight / (1.0278 - 0.0278 * reps)</li>
+                <li><b>Epley Formula: </b>max = weight * (1 + 0.0333 * reps)</li>
             </ul>
 
             <h4>Limitations</h4>
