@@ -61,7 +61,7 @@ export default function Overview() {
             </div>
 
             <div className='overview-section-container'>
-                <h2 className="section-heading overview-section-heading">Max Rep Calculator</h2>
+                <h2 className="section-heading overview-section-heading">One Rep Max Calculator (1RM)</h2>
                 <div className='max-reps-card-container'>
                     {maxRepsCards}
                 </div>
