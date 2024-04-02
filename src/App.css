@@ -1080,6 +1080,7 @@ input[type='number']::-webkit-outer-spin-button {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin: 0 auto;
 }
 
 .liftItem {
@@ -1094,7 +1095,10 @@ input[type='number']::-webkit-outer-spin-button {
   cursor: pointer;
 }
 .muscleTitle {
-  text-align: center;
+  width: fit-content;
+  border: none;
+  margin: 0 auto;
+  margin-bottom: 0.5em;
 }
 .descriptionText {
   max-width: 600px; /* Adjust the value as needed */
@@ -1128,5 +1132,40 @@ input[type='number']::-webkit-outer-spin-button {
 @media (max-width: 768px) {
   .map-container {
     height: 300px; /* Adjust height for smaller screens */
+  }
+}
+
+@media (max-width: 1080px) {
+  .modalFlex {
+    flex-direction: column;
+    /* justify-content: space-between; */
+  }
+
+  .innerModalSelected {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 1em 0;
+  }
+
+  .liftItemSelected {
+    margin: 0;
+    margin-bottom: 0.5em;
+  }
+
+  .liftItemSelected {
+    margin-right: 1em;
+  }
+
+}
+
+@media (max-width: 925px) {
+  .liftItemSelected {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .liftItemSelected {
+    font-size: 0.75rem;
   }
 }

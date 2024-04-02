@@ -19,12 +19,15 @@ const style = {
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
-  width: '50%',
-  height: '60%',
+  width: '80%',
+  height: '75%',
+  maxWidth: '960px',
   bgcolor: 'background.paper',
-  border: '2px solid #000',
   boxShadow: 24,
+  borderRadius: '4px',
+  outline: 0,
   p: 4,
+  overflowY: "auto"
 };
 
 export default function BasicModal(props) {
@@ -79,20 +82,24 @@ export default function BasicModal(props) {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-          <h2 className="muscleTitle">
+          <h2 className="muscleTitle section-heading">
             {open ? props.modalLifts[0].muscle : ''}
           </h2>
           <div className="modalFlex">
             <div
+              // className={
+              //   currentVid.video ? 'innerModal' : 'innerModal centerAuto'
+              // }
               className={
-                currentVid.video ? 'innerModal' : 'innerModal centerAuto'
+                currentVid.video 
+                  ? (selectedBtn ? 'innerModal innerModalSelected' : 'innerModal centerAuto')
+                  : 'innerModal'
               }
             >
               {props.modalLifts.map((el) => (
                 <button
-                  className={`liftItem btn ${
-                    selectedBtn === el.id ? 'selected' : ''
-                  }`}
+                  className={`liftItem btn ${selectedBtn && selectedBtn === el.id ? 'selected' : ''} 
+                  ${selectedBtn ? 'liftItemSelected' : ''}`}
                   key={el.id}
                   onClick={() => handleButtonClick(el)}
                 >
