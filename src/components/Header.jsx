@@ -44,6 +44,7 @@ function Header() {
               className="nav-link"
               to="/"
               style={({ isActive }) => isActive ? activeStyles : null}
+              onClick={toggleMenu}
             >
               Home
           </NavLink>
@@ -51,6 +52,7 @@ function Header() {
             className="nav-link"
             to="/fitness"
             style={({ isActive }) => isActive ? activeStyles : null}
+            onClick={toggleMenu}
           >
             Fitness
           </NavLink>
@@ -58,6 +60,7 @@ function Header() {
             className="nav-link"
             to="/nutrition"
             style={({ isActive }) => isActive ? activeStyles : null}
+            onClick={toggleMenu}
           >
             Nutrition
           </NavLink>
@@ -65,6 +68,7 @@ function Header() {
             className="nav-link"
             to="/plans"
             style={({ isActive }) => isActive ? activeStyles : null}
+            onClick={toggleMenu}
           >
             Plans
           </NavLink>
