@@ -17,6 +17,9 @@ https://github.com/alejandro-cartagena/FitFusion/assets/90916136/c11e2873-71e4-4
 ### One Rep Max Calculator
 https://github.com/alejandro-cartagena/FitFusion/assets/90916136/51bac8a2-2701-4d64-bbeb-4d4c0c77aca4
 
+### Body Mass Index (BMI) Calculator
+https://github.com/alejandro-cartagena/FitFusion/assets/90916136/11e4fbed-6762-4bb8-be88-b5c543326c14
+
 ## Quickstart Guide
 #### Prerequisites
 
