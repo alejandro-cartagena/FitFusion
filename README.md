@@ -20,6 +20,9 @@ https://github.com/alejandro-cartagena/FitFusion/assets/90916136/51bac8a2-2701-4
 ### Body Mass Index (BMI) Calculator
 https://github.com/alejandro-cartagena/FitFusion/assets/90916136/11e4fbed-6762-4bb8-be88-b5c543326c14
 
+### Macro Nutrients Calculator
+https://github.com/alejandro-cartagena/FitFusion/assets/90916136/d09945a5-d511-42ae-91ef-ca92d75c8a48
+
 ## Quickstart Guide
 #### Prerequisites
 
