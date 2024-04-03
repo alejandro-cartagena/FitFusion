@@ -13,6 +13,10 @@ function Header() {
     setMenuOpen(prevVal => !prevVal)
   }
 
+  function closeMenu() {
+    setMenuOpen(false)
+  }
+
   const activeStyles = {
     fontWeight: "bold",
     textDecoration: "underline",
@@ -44,7 +48,7 @@ function Header() {
               className="nav-link"
               to="/"
               style={({ isActive }) => isActive ? activeStyles : null}
-              onClick={toggleMenu}
+              onClick={closeMenu}
             >
               Home
           </NavLink>
@@ -52,7 +56,7 @@ function Header() {
             className="nav-link"
             to="/fitness"
             style={({ isActive }) => isActive ? activeStyles : null}
-            onClick={toggleMenu}
+            onClick={closeMenu}
           >
             Fitness
           </NavLink>
@@ -60,7 +64,7 @@ function Header() {
             className="nav-link"
             to="/nutrition"
             style={({ isActive }) => isActive ? activeStyles : null}
-            onClick={toggleMenu}
+            onClick={closeMenu}
           >
             Nutrition
           </NavLink>
@@ -68,7 +72,7 @@ function Header() {
             className="nav-link"
             to="/plans"
             style={({ isActive }) => isActive ? activeStyles : null}
-            onClick={toggleMenu}
+            onClick={closeMenu}
           >
             Plans
           </NavLink>
