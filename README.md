@@ -12,8 +12,7 @@ Whether you're looking to build muscle, lose weight, improve your overall health
 
 ## Features
 ### Anatomy Page
-The user can click on the higlighted muscles on the anatomy svg and reveal a modal with five different exercises for the muscle they clicked on along with videos showing the user how to perform the exercise.
-[![Anatomy Page Video](https://github.com/alejandro-cartagena/FitFusion/assets/90916136/c11e2873-71e4-4396-9ea6-18b2c1360f63)
+https://github.com/alejandro-cartagena/FitFusion/assets/90916136/c11e2873-71e4-4396-9ea6-18b2c1360f63
 
 ## Quickstart Guide
 #### Prerequisites
