@@ -14,6 +14,9 @@ Whether you're looking to build muscle, lose weight, improve your overall health
 ### Anatomy Page
 https://github.com/alejandro-cartagena/FitFusion/assets/90916136/c11e2873-71e4-4396-9ea6-18b2c1360f63
 
+### One Rep Max Calculator
+https://github.com/alejandro-cartagena/FitFusion/assets/90916136/51bac8a2-2701-4d64-bbeb-4d4c0c77aca4
+
 ## Quickstart Guide
 #### Prerequisites
 
