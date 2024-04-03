@@ -483,7 +483,7 @@ export default function MacroCalculator() {
 
                             {/* Goal */}
                             <div className='select-wrap select-wrap-macro'>
-                                <label className='select-label' htmlFor="goal">Goal</label>
+                                <label className='select-label select-label-goal' htmlFor="goal">Goal</label>
                                 <select onChange={handleUsChange} value={formDataUs.goal} className='one-rep-max-select select-unit' name="goal" id="goal">
                                     <option value="lose slightly">Lose Weight (0.5lb per week)</option>
                                     <option value="lose">Lose Weight (1.0lb per week)</option>
