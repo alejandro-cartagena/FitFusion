@@ -11,10 +11,9 @@ FitFusion was born out of a passion for making fitness accessible and enjoyable 
 Whether you're looking to build muscle, lose weight, improve your overall health, or simply learn more about fitness, FitFusion is here to help you every step of the way.
 
 ## Features
-### Anatomy PAGE
+### Anatomy Page
 
-The user can click on the highlighted muscles in the anatomy svg to reveal a modal with five different exercises to target that muscle along with a video.
-
+https://github.com/alejandro-cartagena/FitFusion/assets/90916136/c11e2873-71e4-4396-9ea6-18b2c1360f63
 
 ## Quickstart Guide
 #### Prerequisites
