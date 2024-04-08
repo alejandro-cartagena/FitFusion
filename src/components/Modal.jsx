@@ -13,6 +13,7 @@ const opts = {
 };
 
 const style = {
+  zIndex: 10000,
   position: 'absolute',
   top: '50%',
   left: '50%',
