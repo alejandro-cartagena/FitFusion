@@ -83,7 +83,7 @@ header {
   padding: 1em 0;
   display: flex;
   justify-content: space-between;
-  z-index: 10000;
+  z-index: 1000;
 }
 
 .header-container {
@@ -623,8 +623,7 @@ footer p {
 }
 
 .select-label {
-  position: absolute;
-  padding-left: 0.5em;
+  padding: 0 0.5em;
 }
 
 select {
